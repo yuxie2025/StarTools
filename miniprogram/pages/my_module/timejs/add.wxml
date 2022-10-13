@@ -1,0 +1,38 @@
+<view class="body">
+    <view class="input_name">
+        <view class="input_text">标题</view>
+        <view class="input_box" style="font-size:28rpx;">
+            <input bindinput="bindKeyInput" placeholder="请输入节日标题" value="{{inputValue}}"></input>
+        </view>
+    </view>
+    <view class="input_name">
+        <view class="input_text">时间</view>
+        <view class="time_box">
+            <view bindtap="showDatepicker3" class="time_display" wx:if="{{lastTab=='lunar'}}">{{dateStr1}}</view>
+            <view bindtap="showDatepicker3" class="time_display" wx:else>{{date1}} {{hour1}}</view>
+            <view class="time_nongli">
+                <view class="nongli" wx:if="{{lastTab=='lunar'}}">农历</view>
+                <view class="gongli" wx:else>公历</view>
+            </view>
+        </view>
+    </view>
+    <view class="input_name">
+        <view class="input_text">背景</view>
+        <scroll-view class="bg_box" scrollX="true">
+            <view bindtap="clickBgColor" class="bg_item" data-index="{{index}}" style="background: linear-gradient(to right, {{item.left}},{{item.right}});" wx:for="{{bgcolorList}}" wx:key="index">
+                <view class="cur" wx:if="{{index==bgColor}}">✔</view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="input_name">
+        <view class="input_text">字体颜色</view>
+        <scroll-view class="text_box" scrollX="true">
+            <view bindtap="clickTextColor" class="text_item" data-index="{{index}}" style="background: {{item}};" wx:for="{{textcolorList}}" wx:key="index">
+                <view class="cur" wx:if="{{index==textColor}}">✔</view>
+            </view>
+        </scroll-view>
+    </view>
+    <view bindtap="finishAdd" class="finishAdd">完成</view>
+</view>
+<rui-datepicker bind:confirm="dateConfirm" id="ruiDatepicker"></rui-datepicker>
+<view class="jumpMask {{jumpModel}}"></view>

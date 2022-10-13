@@ -1,0 +1,116 @@
+/* pages/home/info/index.wxss */
+.top_info{
+  font-size: 36rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  color: #FF5F15;
+}
+.item-list-wrap{
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  background-color: #fff;
+  height: 100rpx;
+  align-items: center;
+  font-size: 30rpx;
+}
+.item_name{
+  width: 48%;
+  font-weight: bold;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  font-size: 26rpx;
+}
+.item_pic{
+  width: 80rpx;
+  height: 80rpx;
+  margin-left: 10rpx;
+  border-radius: 10rpx;
+}
+
+.item_price{
+  width: 20%;
+  margin-right: 10rpx;
+  color: #090;
+}
+
+.item_state{
+  width: 18%;
+  margin-right: 5rpx;
+  font-size: 24rpx;
+}
+
+.item_age{
+  width: 12%;
+  font-size: 24rpx;
+}
+
+
+/*分割线样式*/
+.line {
+  background: #E0E3DA;
+  width: 100%;
+  height: 2rpx;
+}
+
+/*----弹窗------*/
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+ 
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+ 
+.modal-title {
+  padding-top: 30rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+ 
+.modal-content {
+  padding: 0rpx 32rpx 30rpx 32rpx;
+  font-size: 26rxp;
+}
+ 
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+ 
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+ 
+.btn-confirm {
+  width: 100%;
+  color: #ec5300;
+  text-align: center;
+}
+/*----弹窗------*/

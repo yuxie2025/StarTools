@@ -1,0 +1,35 @@
+<!--components/zhuanpan/zhuanpan.wxml-->
+<view class="canvas-container">
+   <!-- 外围边框 -->
+   <!-- <view class='gb-wheel-run' style=''></view> -->
+
+   <view animation="{{animationData}}" class="gb-wheel-content" style='width:{{size.w}}rpx;height:{{size.h}}rpx;'>
+      <!-- 扇形颜色背景 当选项长度等于2或者3时做了特殊处理 -->
+      <view class="canvas-list">
+         <view class="canvas-item2" wx:for="{{awardsConfig.awards}}" wx:key="key" style="transform: rotate({{item.item2Deg}});background-color:{{awardsConfig.awards.length==2?item.color:''}};opacity:{{awardsConfig.awards.length==2?item.opacity:awardsConfig.awards.length==3?item.opacity:''}};width:{{size.h}}rpx;height:{{size.h/2-2}}rpx;transform-origin:{{size.h/2}}rpx {{size.h/2}}rpx">
+            <view class="canvas-item2-after" style="transform: rotate({{item.afterDeg}});background-color:{{item.color}};opacity:{{awardsConfig.awards.length==3?'':item.opacity}};width:{{size.h/2}}rpx;height:{{size.h/2}}rpx;transform-origin: {{size.h/2}}rpx {{size.h/2}}rpx"></view>
+            <view wx:if='{{awardsConfig.awards.length==3}}' class="canvas-item2-after" style="background-color:{{item.color}};width:{{size.h/2}}rpx;height:{{size.h/2}}rpx;transform-origin: {{size.h/2}}rpx {{size.h/2}}rpx"></view>
+         </view>
+      </view>
+
+      <!-- 分割线 -->
+      <!-- <view class="gb-wheel-line">
+               <view class="gb-wheel-litem" wx:for="{{awardsConfig.awards}}" wx:key='key' data-index="{{index}}" style="transform: rotate({{index*turnNum+turnNum/2}}turn);"></view>
+      </view> -->
+
+      <!-- 选项内容 -->
+      <view class="gb-wheel-list">
+         <view class="gb-wheel-item" data-index="{{index}}" wx:for="{{awardsConfig.awards}}" wx:key='key'>
+            <view class="gb-wheel-icontent" style="height:262rpx;overflow:hidden;font-size:{{item.name.length>9?'20':'26'}}rpx;line-height:{{item.name.length>9?'20':'26'}}rpx;width:26rpx;padding-top:5rpx;transform: rotate({{index*turnNum}}turn);transform-origin: 50% {{size.h/2-2}}rpx">
+               <text style='word-break:break-all;'>{{item.name}}</text>
+            </view>
+         </view>
+      </view>
+   </view>
+
+   <!-- 转盘中间的按钮 -->
+   <image bindtap="_zhuan" src='https://6c75-luo-r5nle-1301210100.tcb.qcloud.la/images/canvas_button_go_unclick.png?sign=c71f31a564ec9140671841311c04b37c&t=1583815413' style='width:{{size.h/4.4}}rpx;position:absolute;left:41%;top:38%;margin-top:-11rpx;z-index:9999;display:{{block1}}' mode='widthFix'></image>
+   <image src='https://6c75-luo-r5nle-1301210100.tcb.qcloud.la/images/canvas_button_go_click.png?sign=8e6fa74c734179685d5295c961476660&t=1583815445' style='width:{{size.h/4.4}}rpx;position:absolute;left:41%;top:38%;margin-top:-11rpx;z-index:9999;display:{{block2}}' mode='widthFix'></image>
+   <image bindtap="reset" src='https://6c75-luo-r5nle-1301210100.tcb.qcloud.la/images/canvas_button_reset_unclick.png?sign=d46bf913c96fbc7c2a62624ad6b9ebb1&t=1583815563' style='width:{{size.h/4.4}}rpx;left:41%;top:38%;position: absolute;margin-top:-11rpx;z-index:9999;display:{{block3}}' mode='widthFix'></image>
+   <image src='https://6c75-luo-r5nle-1301210100.tcb.qcloud.la/images/canvas_button_reset_click.png?sign=78c36d22ada157e033a79c02e9b53dbb&t=1583815602' style='width:{{size.h/4.4}}rpx;position:absolute;left:41%;top:38%;margin-top:-11rpx;z-index:9999;display:{{block4}}' mode='widthFix'></image>
+</view>

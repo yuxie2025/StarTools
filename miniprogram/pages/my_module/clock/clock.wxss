@@ -1,0 +1,34 @@
+page {
+    background-color: #000;
+}
+
+.blackPage {
+    color: #fff;
+}
+
+.whitePage {
+    color: #39b54a;
+}
+
+.clock {
+    font-family: 微软雅黑;
+    margin: 0;
+    padding: 0;
+}
+
+.displayTime {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.hourAndMin {
+    font-size: 350rpx;
+    margin-left: -50rpx;
+}
+
+.sec {
+    font-size: 80rpx;
+    margin-left: 30rpx;
+    margin-top: 200rpx;
+}

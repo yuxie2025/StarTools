@@ -1,0 +1,32 @@
+<view bindtap="previewImage" class="image" style="height:{{canvasInfo.height+50}}px;">
+  <canvas canvasId="{{canvasInfo.id}}" class="canvas" style="width:{{canvasInfo.width}}px;height:{{canvasInfo.height}}px;"></canvas>
+</view>
+<view style="overflow:hidden">
+  <form bindsubmit="createQrcode">
+    <input bindinput="inputSave" class="input" name="text" placeholder="请输入链接或文字" type="text" value="{{QrcodeInfo.text}}"></input>
+    <view style="overflow:hidden">
+      <button class="button" formType="submit">生成图片</button>
+    </view>
+    <view class="section">
+      <view class="section_title">二维码宽度</view>
+      <slider showValue activeColor="#08e037" blockColor="#08e037" blockSize="20" class="slider" max="{{systemInfo.width}}" min="100" name="canvasWidth" value="{{canvasInfo.width}}"></slider>
+    </view>
+    <view class="section">
+      <view class="section_title">二维码颜色</view>
+      <picker bindchange="selectForeColor" class="picker" name="foreColor" range="{{color_array}}" value="{{foreColorIndex}}">
+        <view class="section_input">
+          当前选择：<view class="section_input_value">{{color_array[foreColorIndex]}}</view>
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="section_title">背景颜色</view>
+      <picker bindchange="selectBgColor" class="picker" name="bgColor" range="{{color_array}}" value="{{bgColorIndex}}">
+        <view class="section_input">
+          当前选择： <view class="section_input_value">{{color_array[bgColorIndex]}} </view>
+        </view>
+      </picker>
+    </view>
+  </form>
+</view>
+<ad unit-id="{{bannerUnitId}}" ad-intervals="30" />

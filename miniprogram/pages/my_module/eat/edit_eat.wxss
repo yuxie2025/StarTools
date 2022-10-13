@@ -1,0 +1,43 @@
+/* pages/my_module/eat/edit_eat.wxss */
+
+.items-list-wrap {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  margin-top: 5rpx;
+}
+
+.item-list-wrap {
+  display: flex;
+  line-height: 30rpx;
+  padding: 5rpx 15rpx;
+  border: 1rpx solid red;
+  border-radius: 30rpx;
+  margin: 10rpx 15rpx;
+  color: red;
+  font-size: 26rpx;
+}
+
+.view_input {
+  width: 98%;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.input {
+  width: 80%;
+  border-radius: 10rpx;
+  border: 2rpx solid green;
+  height: 65rpx;
+  font-size: 24rpx;
+  padding: 5rpx;
+  margin: 5rpx auto;
+}
+
+.add{
+  width: 120rpx;
+  font-size: 30rpx;
+}

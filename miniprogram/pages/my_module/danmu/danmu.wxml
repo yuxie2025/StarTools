@@ -1,0 +1,42 @@
+<form bindsubmit="createDanmu">
+  <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+  <input class="input" name="content" placeholder="请填上弹幕内容" value=""></input>
+  <view class="section">
+    <view class="section_title">速度</view>
+    <slider showValue activeColor="#08e037" blockSize="15" class="section_input" max="10" min="1" name="speed" value="5"></slider>
+  </view>
+  <view class="section">
+    <view class="section_title">字体大小</view>
+    <slider showValue activeColor="#08e037" blockSize="15" class="section_input" max="200" min="15" name="fontSize" value="100"></slider>
+  </view>
+  <view class="section">
+    <view class="section_title">字体颜色</view>
+    <picker bindchange="selectFontColor" class="picker" name="fontColor" range="{{color_array}}" value="{{font_color_index}}">
+      <view class="section_input">
+        当前选择：{{color_array[font_color_index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section_title">背景颜色</view>
+    <picker bindchange="selectBgColor" class="picker" name="bgColor" range="{{color_array}}" value="{{bg_color_index}}">
+      <view class="section_input">
+        当前选择：{{color_array[bg_color_index]}}
+      </view>
+    </picker>
+  </view>
+  <view class="section">
+    <view class="section_title">字体方向</view>
+    <radio-group color="#08e037" name="direction">
+      <label class="radio">
+        <radio color="#08e037" value="leftToRight"></radio>从左往右
+      </label>
+      <label class="radio">
+        <radio checked="true" color="#08e037" value="rightToLeft"></radio>从右往左
+      </label>
+    </radio-group>
+  </view>
+  <view>
+    <button class="button" formType="submit" hoverClass="button-hover">生成弹幕</button>
+  </view>
+</form>

@@ -1,0 +1,19 @@
+<view class="after-navber">
+  <view>
+    <view class="top">{{speed}} <text style="font-size:35rpx">kb/s</text>
+    </view>
+    <view class="bar">你的网速为：{{speedAsMb}} mb/s</view>
+    <view class="bar">速度相当于：{{speedAsType}}</view>
+    <view class="bar">手机品牌：{{systemInfo.mobilePhone}}</view>
+    <view class="bar">手机型号：{{systemInfo.mobileModel}}</view>
+    <view class="bar">系统版本：{{systemInfo.systemVersion}}</view>
+    <view class="bar">网络类型：{{systemInfo.networkType}}</view>
+    <view class="bar">微信版本：{{systemInfo.wechatVersion}}</view>
+    <view class="bar1">请多测试几次较为准确</view>
+    <view bindtap="startSpeedMeasure" class="button" hoverClass="button-hover">重新测速</view>
+  </view>
+
+  <view style="width: 92%;margin: 20rpx auto;">
+    <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+  </view>
+</view>

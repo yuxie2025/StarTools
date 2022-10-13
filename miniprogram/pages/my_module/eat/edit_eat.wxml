@@ -1,0 +1,14 @@
+<!--pages/my_module/eat/edit_eat.wxml-->
+<view class="container">
+  <view class="view_input">
+    <input class="input" placeholder="请输入菜名" value="{{name}}" bindinput="bindKeyInput" />
+    <button class="add" type="primary" bindtap="add">添加</button>
+  </view>
+  <view class="items-list-wrap wr-class">
+    <block wx:for="{{itemsList}}" wx:for-item="item" wx:key="index">
+      <view class="item-list-wrap" data-id="{{item}}" bind:tap="delete">
+        <text class="item_name">{{item.name}} X</text>
+      </view>
+    </block>
+  </view>
+</view>

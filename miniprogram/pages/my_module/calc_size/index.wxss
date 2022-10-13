@@ -1,0 +1,81 @@
+/**index.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50rpx 0;
+  box-sizing: border-box;
+  text-align: center;
+} 
+input{
+  border: 1px solid #0eb83a;
+  width: 86%;
+  margin: 5%;
+  border-radius: 8rpx;
+  padding: 8px 5px;
+  font-size: 30rpx;
+}
+button{width: 90%;}
+.cmb_con{
+  width: 90%;margin: auto;
+  text-align: left;
+  font-size:30rpx;
+  font-family:Arial, Helvetica, sans-serif;
+  color: #000;
+  padding-top: 50rpx;
+  line-height: 180%;
+}
+.fuzhuang{text-align: left;}
+.title{font-weight: bold}
+.shuoming{font-size:26rpx;}
+.cmb_img{width:100%;height:auto;}
+.chimaInfo{font-size:32rpx;width: 90%;margin: 40rpx auto 0 auto;line-height: 180%;color: red;}
+
+.mytable {
+  border: 1px solid #666;
+  border-right: none;
+  border-bottom: none;
+  width:99%;
+  font-size: 26rpx;
+}
+.mytable .tr {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 2rem;
+  align-items: center;
+  border-bottom: 1px solid #666;
+}
+.mytable .td {
+    width:14.2%;
+    height: 2rem;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid #666;
+    line-height: 2rem;
+}
+.mytable .w22{width:18%;}
+.mytable .bg-w{
+  background: snow;
+}
+.mytable .bg-g{
+  background: #E6F3F9;
+}
+
+.qz_table .td {width:16.3%;}
+.qz_table .w22{width:19%;}
+
+.nkz_table .td {width:20%;}
+
+.mytable .zghx .td{line-height:100%;word-break:break-all;padding-top:20rpx;}
+
+.xizhuang_table .td{width:14.2%;}
+.tongzhuang_table .td{width:19.8%;}
+.tongying_table .td{width:16.6%;}
+.zhongtong_table .td{width:19.8%;}
+.datong_table .td{width:19.8%;}
+.wenxiong_table .td{width:16.6%;}
+.neiku_table .td{width:19.8%;}

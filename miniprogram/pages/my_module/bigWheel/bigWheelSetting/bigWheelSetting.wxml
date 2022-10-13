@@ -1,0 +1,47 @@
+<!--miniprogram/pages/bigWheel/bigWheelSetting/bigWheelSetting.wxml-->
+<view class="container">
+	<view class="modules_box">
+		<view class="modules_icon_box">
+			<image class="modules_icon" mode="scaleToFill" src="{{showLove}}"></image>
+		</view>
+		<view class="modules_title_box">偏心</view>
+		<view class="modules_switch_box">
+			<switch bindchange="switchChangeFastSelect" checked="{{isLove}}" class="modules_switch" type="switch"></switch>
+		</view>
+	</view>
+	<view class="modules_box">
+		<view class="modules_icon_box">
+			<image class="modules_icon" mode="scaleToFill" src="{{bigWheel_sound}}"></image>
+		</view>
+		<view class="modules_title_box">声音</view>
+		<view class="modules_switch_box">
+			<switch bindchange="switchChangeSound" checked="{{isSound}}" class="modules_switch" type="switch"></switch>
+		</view>
+	</view>
+	<view class="modules_box">
+		<view class="modules_icon_box">
+			<image class="modules_icon" mode="scaleToFill" src="{{bigWheel_repeat}}"></image>
+		</view>
+		<view class="modules_title_box">不重复抽取</view>
+		<view class="modules_switch_box">
+			<switch bindchange="switchChangeNoRepetitionSelect" checked="{{isRepeat}}" class="modules_switch" type="switch"></switch>
+		</view>
+	</view>
+
+
+
+<view class="modules_box">
+		<view class="modules_icon_box">
+			<image class="modules_icon" mode="scaleToFill" src="{{bigWheel_speed}}"></image>
+		</view>
+    <view class="slider-box">
+      <text class="slider-title">转动速度</text>
+      <view class="slider-view">
+        <slider bindchange="sliderChange" min="1" max="6" value="{{speed}}" show-value />
+      </view>
+    </view>
+</view>
+	<view style="width:100vw;margin-top:100rpx;">
+    <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+	</view>
+</view>

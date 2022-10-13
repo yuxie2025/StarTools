@@ -1,0 +1,25 @@
+<!--pages/home/me/index.wxml-->
+<view>
+  <view class="top">
+    <view>
+      <image class="head_img" src="{{headeSrcPath}}" />
+    </view>
+    <view class="user_name">
+      <text>{{userName}}</text>
+    </view>
+    <view>
+      <button class='button' open-type="share">
+        分享给好友
+      </button>
+    </view>
+    <view style="margin-bottom: 20rpx;">
+      <button class='button' open-type="feedback">
+        反馈与建议
+      </button>
+    </view>
+    <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+  </view>
+  <view class="bottom">
+    <text class="version">版本:V{{version}}</text>
+  </view>
+</view>

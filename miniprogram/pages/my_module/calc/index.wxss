@@ -1,0 +1,67 @@
+@import "reset.wxss";
+page{
+  display: block;
+  background: #000;
+}
+.calculator{
+  width: 750rpx;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  bottom: 40rpx;
+}
+.calculator-display{
+  display: flex;
+  width: 95%;
+  padding: 15rpx;
+}
+.content{
+  color: #fff;
+  text-align: right;
+  font-size: 100rpx; 
+  width: 95%;
+  margin: 15rpx;
+}
+.calculator-keypad {
+  display: flex;
+}
+
+.calculator .function-keys {
+  display: flex;
+}
+.calculator .digit-keys {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+}
+.hover-shadow {
+   box-shadow: inset 0rpx 0rpx 350rpx 0rpx rgb(242,242,242);
+}
+.calculator-key {
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  margin-left: 42rpx;
+  margin-top: 30rpx;
+  line-height: 140rpx;
+  border-radius: 50%;
+  border:1px solid #333;
+  background: #333;
+  color: #fff;
+  font-size: 60rpx;
+  text-align: center;
+}
+.calculator .function-keys .calculator-key {
+ background: #ADADAD;
+ color: #000;
+}
+.calculator .digit-keys .key-0 {
+  width: 320rpx;
+  border-radius: 150rpx;
+}
+.calculator .operate-keys .calculator-key{
+  margin-right: 30rpx;
+  background: #FF8C66;
+} 
+
+

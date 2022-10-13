@@ -1,0 +1,41 @@
+/* pages/home/me/index.wxss */
+.bottom {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex;
+}
+
+.version {
+  width: 100%;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.top {
+  flex-direction: column;
+  text-align: center;
+  font-size: 32rpx;
+  margin-top: 30rpx;
+}
+
+.head_img {
+  width: 70px;
+  height: 70px;
+  background-color: #eeeeee;
+  border-radius: 50%;
+}
+
+.user_name {
+  margin-bottom: 40rpx;
+}
+
+.button {
+  margin-top: 12rpx;
+  text-align: left;
+  font-size: 32rpx;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  padding: 5px 10px;
+}

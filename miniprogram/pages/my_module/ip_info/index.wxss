@@ -1,0 +1,53 @@
+/* pages/my_module/ip_info/index.wxss */
+
+.view_input {
+  width: 96%;
+  margin-bottom: 10rpx;
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 10rpx auto;
+}
+.input {
+  width: 80%;
+  border-radius: 10rpx;
+  border: 2rpx solid green;
+  height: 65rpx;
+  font-size: 24rpx;
+  padding: 5rpx 10rpx;
+  margin: 5rpx auto;
+}
+
+.button_search{
+  width: 120rpx;
+  margin-left: 10rpx;
+  font-size: 30rpx;
+}
+
+.items {
+  margin: 10rpx 20rpx;
+  background-color: #fff;
+  padding: 15rpx;
+  border-radius: 15rpx;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 36rpx;
+  text-align: center;
+  align-items: center;
+  padding: 15rpx;
+}
+
+.item_value {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: green;
+  text-align: center;
+  align-items: center;
+  font-size: 26rpx;
+}

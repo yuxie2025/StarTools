@@ -1,0 +1,124 @@
+page {
+  background-color: #000;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.iphone-x {
+  height: calc(100vh - 68rpx);
+  margin-bottom: 68rpx;
+}
+
+.header {
+  width: 100%;
+  height: 120rpx;
+  color: #fff;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.content .wrapper {
+  padding: 70rpx;
+  width: calc(100% - 140rpx);
+  height: calc(100% - 140rpx);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .target {
+  width: 100%;
+  height: 100%;
+}
+
+.content .movrea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .magnifier {
+  width: 128rpx;
+  height: 128rpx;
+  border: 8rpx solid #fff;
+  box-shadow: 0rpx 2rpx 20rpx 10rpx rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .circle {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .bigger {
+  width: 94rpx;
+  height: 94rpx;
+  border: 2rpx solid #fff;
+  border-radius: 50%;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .pixels {
+  width: 60rpx;
+  height: 60rpx;
+  border: 2rpx solid #fff;
+  overflow: hidden;
+}
+
+.footer {
+  width: 100%;
+  height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.footer .button {
+  margin-bottom: 20rpx;
+  width: 148rpx;
+  height: 148rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iNzQiIGhlaWdodD0iNzQiIHZpZXdCb3g9IjAgMCA3NCA3NCI+CiAgPGRlZnM+CiAgICA8Y2lyY2xlIGlkPSJidXR0b24tYiIgY3g9IjM3IiBjeT0iMzciIHI9IjM3Ii8+CiAgICA8ZmlsdGVyIGlkPSJidXR0b24tYSIgd2lkdGg9IjE1Mi43JSIgaGVpZ2h0PSIxNTIuNyUiIHg9Ii0yNi40JSIgeT0iLTI2LjQlIiBmaWx0ZXJVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giPgogICAgICA8ZmVNb3JwaG9sb2d5IGluPSJTb3VyY2VBbHBoYSIgb3BlcmF0b3I9ImRpbGF0ZSIgcmFkaXVzPSIyLjUiIHJlc3VsdD0ic2hhZG93U3ByZWFkT3V0ZXIxIi8+CiAgICAgIDxmZU9mZnNldCBpbj0ic2hhZG93U3ByZWFkT3V0ZXIxIiByZXN1bHQ9InNoYWRvd09mZnNldE91dGVyMSIvPgogICAgICA8ZmVHYXVzc2lhbkJsdXIgaW49InNoYWRvd09mZnNldE91dGVyMSIgcmVzdWx0PSJzaGFkb3dCbHVyT3V0ZXIxIiBzdGREZXZpYXRpb249IjQiLz4KICAgICAgPGZlQ29sb3JNYXRyaXggaW49InNoYWRvd0JsdXJPdXRlcjEiIHZhbHVlcz0iMCAwIDAgMCAwICAgMCAwIDAgMCAwICAgMCAwIDAgMCAwICAwIDAgMCAwLjA1IDAiLz4KICAgIDwvZmlsdGVyPgogIDwvZGVmcz4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHVzZSBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjYnV0dG9uLWEpIiB4bGluazpocmVmPSIjYnV0dG9uLWIiLz4KICAgIDx1c2UgZmlsbD0iI0ZGRiIgeGxpbms6aHJlZj0iI2J1dHRvbi1iIi8+CiAgICA8ZyBmaWxsLXJ1bGU9Im5vbnplcm8iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE3IDE3KSI+CiAgICAgIDxyZWN0IHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgZmlsbD0iIzAwMCIgb3BhY2l0eT0iMCIvPgogICAgICA8cG9seWdvbiBmaWxsPSIjMjJDNjg4IiBwb2ludHM9IjE1IDM0LjY2NiAxIDIwLjY2NiA1LjY2NiAxNiAxNSAyNS4zMzQgMzQuMzM0IDYgMzkgMTAuNjY2Ii8+CiAgICA8L2c+CiAgPC9nPgo8L3N2Zz4K');
+  background-position: center;
+}

@@ -1,0 +1,27 @@
+<view class="after-navber" wx:if="{{!isRelease}}">
+  <view class="container">
+    <form bindsubmit="formSubmit">
+      <view>
+        <picker bindchange="bindPickerChange" class="seachInput" mode="multiSelector" range="{{blood}}" value="{{b}}">
+          <view class="picker"> 您的血型：{{blood[0][ b[0] ]}} , 配偶血型：{{blood[1][ b[1] ]}}</view>
+        </picker>
+      </view>
+      <view class="itemButtom">
+        <button class="seachButtom" formType="submit">查询</button>
+      </view>
+    </form>
+    <view class="paragraphs" wx:if="{{flag==1}}">
+      <view class="paragraph">{{dataInfo}}</view>
+    </view>
+    <view class="tool-info">
+      <text class="title">血型知识</text>
+      <text class="info">
+        在医学上，血型一般分为 AA 、OA、BB 、OB、AB 和 O 型六种血型，AA 型和 OA 型统称为 A 型，BB 型和 OB 型也统称为 B 型。
+
+        子女的血型是取父亲血型的一部分（ A 、B 或 O ）和母亲血型的一部分（ A 、B 或 O）混合而成的新的血型，这个新的血型就是子女的血型，所以子女的血型与父母的血型有关。</text>
+    </view>
+  </view>
+  <view style="width: 92%;margin: 10rpx auto;">
+    <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+  </view>
+</view>

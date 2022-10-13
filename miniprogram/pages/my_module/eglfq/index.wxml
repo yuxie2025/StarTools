@@ -1,0 +1,6 @@
+<view class="page__bd">
+    <image catchtap="start" src="./image/{{bgimg}}.jpg"></image>
+    <image catchtap="start" src="./image/1.jpg" style="display:none"></image>
+    <image catchtap="start" src="./image/2.jpg" style="display:none"></image>
+    <image catchtap="start" src="./image/3.jpg" style="display:none"></image>
+</view>

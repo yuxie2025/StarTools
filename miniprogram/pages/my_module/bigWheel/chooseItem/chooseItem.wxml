@@ -1,0 +1,62 @@
+<!--pages/list/list.wxml-->
+<view class="container">
+  <view class="question_tab_box">
+    <view bindtap="tabSwitch" class="question_tab {{tab_index==1?'question_tab_selected':''}}" data-flg="1">热门小决定</view>
+    <view bindtap="tabSwitch" class="question_tab {{tab_index==2?'question_tab_selected':''}}" data-flg="2">我的小决定</view>
+  </view>
+  <view class="question_list_box">
+    <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+    <!-- 热门小决定 -->
+    <view class="official_question_list_box" style="display:{{tab_index=='1'?'block':'none'}};">
+      <view class="official_question_list_cell question_list_cell" wx:for="{{xiaojueding}}" wx:key="unique">
+        <view bindtap="officialQToRun" class="official_question question" data-id="{{item.id}}" data-index="{{index}}">{{item.option}}</view>
+
+
+        <view bindtap="officialQToControl" class="official_question_control_box question_control_box" data-index="{{index}}">
+          <image class="question_control" mode="scaleToFill" src="{{index==item.num?bigWheel_close_list:bigWheel_open_list}}"></image>
+        </view>
+        <view class="official_question_btn_box question_btn_box" style="display:{{index==item.num?'flex':'none'}};">
+
+          <button bindtap="officialQToRevise" class="question_btn_cell btn_boder_right" data-index="{{index}}" hoverClass="none">
+            <image class="question_btn_icon" mode="scaleToFill" src="{{bigWheel_edit}}"></image>
+            <view class="question_btn_title">编辑</view>
+          </button>
+          <button bindtap="officialQToKeep" class="question_btn_cell btn_boder_right" data-index="{{index}}" hoverClass="none">
+            <image class="question_btn_icon" mode="scaleToFill" src="{{bigWheel_love}}"></image>
+            <view class="question_btn_title">收藏</view>
+          </button>
+
+        </view>
+      </view>
+    </view>
+
+    <!-- 个人小决定 -->
+    <view class="personal_question_list_box" style="display:{{tab_index=='2'?'block':'none'}};">
+      <view class="personal_question_list_cell question_list_cell" wx:for="{{myxiaojueding}}" wx:key="unique">
+        <view bindtap="personalQToRun" class="personal_question question" data-id="{{item.id}}" data-index="{{index}}">{{item.option}}</view>
+        <view bindtap="personalQToControl" class="personal_question_control_box question_control_box" data-index="{{index}}">
+          <image class="question_control" mode="scaleToFill" src="{{index==item.num1?bigWheel_close_list:bigWheel_open_list}}"></image>
+        </view>
+
+        <view class="personal_question_btn_box question_btn_box" style="display:{{index==item.num1?'flex':'none'}};">
+
+          <button bindtap="personalQToRevise" class="question_btn_cell btn_boder_right" data-index="{{index}}" hoverClass="none">
+            <image class="question_btn_icon" mode="scaleToFill" src="{{bigWheel_edit}}"></image>
+            <view class="question_btn_title">编辑</view>
+          </button>
+          <button bindtap="personalQToDelete" class="question_btn_cell btn_boder_right" data-index="{{index}}" hoverClass="none">
+            <image class="question_btn_icon" mode="scaleToFill" src="{{bigWheel_delete}}"></image>
+            <view class="question_btn_title">删除</view>
+          </button>
+
+        </view>
+      </view>
+
+      <view bindtap="addPersonalQ" class="personal_question_add_cell question_list_cell">
+        <view class="question_add_box">
+          <image class="question_add_icon" mode="scaleToFill" src="{{bigWheel_add}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,209 @@
+.container {
+    margin: 56rpx;
+    width: calc(100% - 112rpx);
+    height: calc(100vh - 212rpx);
+    border-radius: 10rpx;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.container.iphone-x {
+    margin-bottom: 124rpx;
+    height: calc(100vh - 280rpx);
+    vertical-align: middle;
+}
+
+.content {
+    padding: 40rpx;
+    background-color: rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.time {
+    font-size: 28rpx;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0.6;
+    line-height: 40rpx;
+}
+
+.edit {
+    width: 146rpx;
+    height: 40rpx;
+    border-radius: 28rpx;
+    opacity: 0.6;
+    border: 2rpx solid #fff;
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-weight: 400;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name {
+    margin-bottom: 34rpx;
+    font-size: 40rpx;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    font-weight: 600;
+    color: #fff;
+    line-height: 56rpx;
+}
+
+.item {
+    margin-bottom: 28rpx;
+    padding: 20rpx 30rpx;
+    width: calc(100% - 60rpx);
+    border: 2rpx solid #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
+.left .label {
+    font-size: 24rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-weight: 400;
+    color: #fff;
+    line-height: 34rpx;
+}
+
+.left .value {
+    font-size: 36rpx;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    font-weight: 600;
+    color: #fff;
+    line-height: 50rpx;
+}
+
+.copy {
+    width: 32rpx;
+    height: 32rpx;
+}
+
+.toolbar {
+    position: fixed;
+    bottom: 30rpx;
+    padding: 0 26rpx;
+    width: calc(100% - 52rpx);
+    height: 100rpx;
+    background-color: #fff;
+    box-shadow: 0px -2px 12px 2px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.toolbar.iphone-x {
+    padding-bottom: 68rpx;
+}
+
+.toolbar .button {
+    margin: 0 10rpx;
+    height: 72rpx;
+    border: 2rpx solid #000;
+    border-radius: 36rpx;
+    background-color: #fff;
+    font-family: PingFangSC-Semibold;
+    font-size: 32rpx;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.toolbar .button.gray {
+    border: 2rpx solid #9b9b9b;
+    color: #6e6e6e;
+}
+
+.toolbar .button.fill {
+    background-color: #000;
+    color: #fff;
+}
+
+.toolbar .button image {
+    margin-right: 6rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.modal {
+    width: calc(100% - 112rpx);
+    height: 416rpx;
+    background: #fff;
+    border-radius: 24rpx;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal .title {
+    margin-top: 64rpx;
+    font-size: 34rpx;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-weight: 500;
+    color: rgba(0,0,0,1);
+    line-height: 48rpx;
+}
+
+.modal .input {
+    padding: 12rpx 0;
+    width: calc(100% - 96rpx);
+    border-bottom: 2rpx solid #f0f0f0;
+    font-size: 34rpx;
+    font-family: PingFangSC-Regular,PingFang SC;
+    font-weight: 400;
+    color: #000;
+    line-height: 48rpx;
+}
+
+.modal .footer {
+    width: 100%;
+    height: 110rpx;
+    border-top: 2rpx solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal .button {
+    width: 50%;
+    font-size: 34rpx;
+    font-family: PingFangSC-Medium,PingFang SC;
+    font-weight: 500;
+    color: #000;
+    line-height: 48rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .confirm {
+    width: calc(50% - 2rpx);
+    color: #576b95;
+    border-left: 2rpx solid #f0f0f0;
+}

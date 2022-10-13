@@ -1,0 +1,18 @@
+<view class="container {{iPhoneX?'iphone-x':''}}">
+    <view class="header">拖拽取色器选取颜色即可收藏</view>
+    <view class="content">
+        <view class="wrapper">
+            <image class="target" mode="aspectFit" src="{{path}}" style="width:{{imageWidth}}px;height:{{imageHeight}}px;"></image>
+        </view>
+        <movable-area class="movrea" style="width:{{movreaWidth}}px;height:{{movreaHeight}}px;">
+            <movable-view bindchange="onTouchMove" bindtouchend="onTouchEnd" class="magnifier" direction="all" id="magnifier" x="{{x}}" y="{{y}}">
+                <view class="circle" style="background-color: {{color.hex}};">
+                    <canvas canvasId="bigger" class="pixels" id="bigger"></canvas>
+                </view>
+            </movable-view>
+        </movable-area>
+    </view>
+    <view class="footer">
+        <view catchtap="onSubmit" class="button" hoverClass="hover"></view>
+    </view>
+</view>

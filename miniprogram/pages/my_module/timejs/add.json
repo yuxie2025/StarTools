@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "rui-datepicker": "./components/rui-datepicker"
+  },
+  "navigationBarTitleText": "添加节日",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#f8646d"
+}

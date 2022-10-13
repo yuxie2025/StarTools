@@ -1,0 +1,11 @@
+page {
+    background-color: #63c0b4;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30rpx auto;
+    width: 100%;
+}

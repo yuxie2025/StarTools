@@ -1,0 +1,2 @@
+<canvas canvasId="bgCanvas" id="bgCanvas"></canvas>
+<canvas canvasId="textCanvas" id="textCanvas"></canvas>

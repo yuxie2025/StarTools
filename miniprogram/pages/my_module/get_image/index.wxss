@@ -1,0 +1,60 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 5rpx;
+}
+
+.image {
+  width: 100%;
+  max-height: 320px;
+  margin-bottom: 5px;
+}
+
+.btn{
+  margin-bottom: 10px;
+  margin: 0 25px;
+}
+
+.btn_save{
+  width: 94%;
+  margin: 20rpx;
+}
+
+/*分割线样式*/
+.line {
+  background: #E0E3DA;
+  width: 100%;
+  margin-top: 4px;
+  height: 2rpx;
+}
+
+.btns_view {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  color: #fff;
+  font-size: 22rpx;
+}
+
+.cat {
+  background-color: violet;
+}
+
+.dog {
+  background-color: tomato;
+}
+
+.scenery {
+  background-color: palevioletred;
+}
+
+.cartoon {
+  background-color: purple;
+}
+
+.cartoon_people {
+  background-color: slateblue;
+}

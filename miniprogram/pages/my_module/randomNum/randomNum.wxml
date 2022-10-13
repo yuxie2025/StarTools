@@ -1,0 +1,9 @@
+<view id="numbers">
+  <view id="header">
+    <input bindblur="setNum1" maxlength="4" type="number" value="{{num1}}"></input>
+    <text class="text1">~</text>
+    <input bindblur="setNum2" maxlength="4" type="number" value="{{num2}}"></input>
+  </view>
+  <view id="result">{{result}}</view>
+</view>
+<view catchtap="start" hidden="{{hideBtn}}" id="btn-start">摇</view>

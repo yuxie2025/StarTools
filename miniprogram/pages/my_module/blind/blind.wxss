@@ -1,0 +1,77 @@
+page {
+    background: #f06060;
+}
+
+.box {
+    background-color: #ddd;
+    border-radius: 10px;
+    bottom: 0;
+    height: 710rpx;
+    left: 0;
+    margin: auto;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    top: 20px;
+    width: 710rpx;
+}
+
+button {
+    box-sizing: border-box!important;
+    text-align: center!important;
+}
+
+.xf {
+    bottom: 12%!important;
+}
+
+.xf2 {
+    box-sizing: inherit!important;
+}
+
+.inbox {
+    border: 5rpx solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    float: left;
+}
+
+.modal {
+    background: hsla(0,0%,47%,.6);
+    bottom: 0;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.content,.modal {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    background: #fff;
+    border-radius: 10rpx;
+    height: 500rpx;
+    padding-top: 20rpx;
+    position: relative;
+    width: 80%;
+}
+
+.modal-result {
+    color: #d8c00d;
+    font-size: 80px;
+    font-weight: 700;
+}
+
+.modal-btn {
+    bottom: -146rpx;
+    color: #fff;
+    position: relative;
+    width: 100%;
+}

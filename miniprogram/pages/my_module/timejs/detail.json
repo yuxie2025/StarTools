@@ -1,0 +1,8 @@
+{
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "节日倒计时",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "usingComponents": {},
+    "navigationBarBackgroundColor": "#f8646d"
+}

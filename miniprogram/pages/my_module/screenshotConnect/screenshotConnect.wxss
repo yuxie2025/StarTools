@@ -1,0 +1,77 @@
+page {
+    padding: 0;
+    margin: 0;
+    font-size: 30rpx;
+    color: #757575;
+    background-color: #eeeeee;
+}
+
+.preview-image,.select-image {
+    display: block;
+    box-sizing: border-box;
+    width: 210rpx;
+    height: 370rpx;
+    overflow: hidden;
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    box-shadow: 0rpx 0rpx 20rpx rgba(0,0,0,0.2);
+    float: left;
+    position: relative;
+}
+
+.select-image {
+    background-color: #08e037;
+    color: #ffffff;
+    text-align: center;
+    line-height: 370rpx;
+}
+
+.remove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24rpx;
+    width: 80rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #f8678d;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: -4rpx 4rpx 10rpx rgba(0,0,0,0.2);
+}
+
+.bottom-tab {
+    position: fixed;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+    font-size: 30rpx;
+    width: 750rpx;
+    overflow: hidden;
+    box-sizing: border-box;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0rpx -4rpx 10rpx rgba(0,0,0,0.2);
+}
+
+.tabBtn {
+    width: 375rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    text-align: center;
+    float: left;
+}
+
+.tabBtn:nth-child(1) {
+    background-color: green;
+}
+
+.tabBtn:nth-child(2) {
+    background-color: orangered;
+}
+
+.tabBtn:active,.select-image-hover {
+    background-color: #000000;
+}

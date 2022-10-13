@@ -1,0 +1,8 @@
+<page bindtap="change" class="{{changeColor==0?'blackPage':'whitePage'}}">
+    <view class="clock" style="padding-top:{{height}}px;">
+        <view class="displayTime" style="transform:{{diretion}};">
+            <text class="hourAndMin">{{time}}</text>
+            <text class="sec">{{sec}}</text>
+        </view>
+    </view>
+</page>

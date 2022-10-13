@@ -1,0 +1,38 @@
+<template name="calculator-key">
+  <button hover-start-time="{{5}}" hover-stay-time="{{20}}" hover-class="hover-shadow" data-key="{{className}}" class="calculator-key {{className}}">{{display}}</button>
+</template>
+
+<view class="calculator">
+  <view class="calculator-display">
+    <view class="content">{{showValue}}</view>
+  </view>
+  <view class="calculator-keypad">
+    <view class="input-keys">
+      <view class="function-keys" catchtap="onTapFunction">
+        <template is="calculator-key" data="{{className: 'key-clear', display: clearDisplay ? 'C' : 'AC'}}"/>
+        <template is="calculator-key" data="{{className: 'key-sign', display: '+/-'}}"/>
+        <template is="calculator-key" data="{{className: 'key-percent', display: '%'}}"/>
+      </view>
+      <view class="digit-keys" catchtap="onTapNum">
+        <template is="calculator-key" data="{{className: 'key-0', display: '0'}}"/>
+        <template is="calculator-key" data="{{className: 'key-dot', display: '●'}}"/>
+        <template is="calculator-key" data="{{className: 'key-1', display: '1'}}"/>
+        <template is="calculator-key" data="{{className: 'key-2', display: '2'}}"/>
+        <template is="calculator-key" data="{{className: 'key-3', display: '3'}}"/>
+        <template is="calculator-key" data="{{className: 'key-4', display: '4'}}"/>
+        <template is="calculator-key" data="{{className: 'key-5', display: '5'}}"/>
+        <template is="calculator-key" data="{{className: 'key-6', display: '6'}}"/>
+        <template is="calculator-key" data="{{className: 'key-7', display: '7'}}"/>
+        <template is="calculator-key" data="{{className: 'key-8', display: '8'}}"/>
+        <template is="calculator-key" data="{{className: 'key-9', display: '9'}}"/>
+      </view>
+    </view>
+    <view class="operate-keys" catchtap="onTapOperate">
+        <template is="calculator-key" data="{{className: 'key-divide', display: '÷'}}"/>
+        <template is="calculator-key" data="{{className: 'key-multiply', display: '×'}}"/>
+        <template is="calculator-key" data="{{className: 'key-subtract', display: '−'}}"/>
+        <template is="calculator-key" data="{{className: 'key-add', display: '+'}}"/>
+        <template is="calculator-key" data="{{className: 'key-equals', display: '='}}"/>
+    </view>
+  </view>
+</view>

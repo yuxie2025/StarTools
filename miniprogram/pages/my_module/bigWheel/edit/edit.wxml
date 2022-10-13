@@ -1,0 +1,35 @@
+<!--pages/edit/edit.wxml-->
+<view class="container">
+	<view class="modules_box modules_question_box">
+		<view class="modules_icon_box">
+			<image class="modules_icon" mode="scaleToFill" src="{{bigWheel_questionMark}}"></image>
+		</view>
+		<view class="modules_q_box">
+			<input bindinput="checkQuestion" class="modules_input" maxlength="21" placeholder="小决定名称 | 限21位中英文数字？" placeholderStyle="color:#cfcfcf;" type="text" value="{{name}}"></input>
+		</view>
+	</view>
+
+	<view style='height:{{isLove?100:60}}px' class="modules_box modules_answer_box" wx:for="{{input_answer_list}}" wx:key="unique">
+		<view bindtap="subAnswer" class="modules_icon_box" data-index="{{index}}">
+			<image class="modules_icon" mode="scaleToFill" src="{{bigWheel_sub}}"></image>
+		</view>
+		<view class="modules_input_box" style='height:{{isLove?80:60}}px;margin-bottom:{{isLove?20:0}}px;'>
+			<input style='margin-bottom:{{isLove?10:0}}px;margin-top:{{isLove?40:0}}px;' bindinput="checkAnswer" class="modules_input" data-index="{{index}}" maxlength="13" placeholder="小决定选项 | 限13位中英文数字" placeholderStyle="color:#cfcfcf" type="text" value="{{item.name}}"></input>
+			<slider wx:if='{{isLove}}' show-value block-size='12' min="1" max="100" value="{{item.probability}}" bindchange="changeProbability" data-index="{{index}}"></slider>
+		</view>
+		<!--   <view class="showProbability">{{item.probability}}</view> -->
+	</view>
+
+	<view bindtap="addAnswer" class="modules_box modules_add_box">
+		<view class="modules_icon_box">
+			<image class="modules_icon" mode="scaleToFill" src="{{bigWheel_add}}"></image>
+		</view>
+		<view class="modules_word_box">
+			<view class="modules_word">增加选项</view>
+		</view>
+	</view>
+
+	<view bindtap="saveQA" class="modules_box modules_save_box">
+		<view class="modules_icon_box">保存</view>
+	</view>
+</view>

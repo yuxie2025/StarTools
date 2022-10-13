@@ -1,0 +1,139 @@
+<!--index.wxml-->
+<view class="container">
+	<view class="result" style="background-color:{{conditionColor}};" bindlongpress="clear">
+		<view class="title">BMI值</view>
+		<view class="score">{{score}}</view>
+		<view class="tip first-tip">
+			<view class="physical-condition">身体状况：<text class="">{{physicalCondition}}</text></view>
+			<view class="weight-standard no-border">健康体重范围：
+				<text wx:if='{{weightStandardMin!=0}}'>{{weightStandardMin}}~{{weightStandardMax}}kg</text>
+				<text wx:else>未知</text>
+			</view>
+		</view>
+		<view class="tip">
+			<view class="physical-condition">相关疾病发病危险性: <text class="">{{danger}}</text></view>
+		</view>
+	</view>
+	<view class="input-container">
+		<view class="item">
+			<text class="label">身高</text>
+			<input type="digit" placeholder="请输入身高" bindinput="bindKeyHightInput"  maxlength="6" value="{{inputValue}}" />
+			<text class="unit">cm</text>
+		</view>
+		<view class="item">
+			<text class="label">体重</text>
+			<input type="digit" placeholder="请输入体重" bindinput="bindKeyWeightInput" maxlength="6" class="" value="{{inputValue}}" />
+			<text class="unit">kg</text>
+		</view>
+		<view class="item no-border">
+			<text class="label">标准</text>
+			<picker mode="selector" value="{{index}}" range="{{array}}" bindchange="bindPickerChange" class="type_select">
+				<view class="picker">
+					{{array[index]}}
+					<text>></text>
+				</view>
+			</picker>
+		</view>
+		<button style="width:90vw" class="calcu_btn" bindtap="calculateBtn">开始计算</button>
+	</view>
+
+	<view class="compatable">
+		<text class="table-title">标准对照表</text>
+		<!--中国标准-->
+		<view class="table" hidden="{{index!= 0}}">
+			<view class="row thead">
+				<text class="col">BMI值</text>
+				<text class="col">身体状况</text>
+			</view>
+			<view class="row c1">
+				<text class="col">{{charLt}}18.5</text>
+				<text class="col">偏瘦</text>
+			</view>
+			<view class="row c2">
+				<text class="col">18.5～23.9</text>
+				<text class="col">正常</text>
+			</view>
+			<view class="row c3">
+				<text class="col">24～26.9</text>
+				<text class="col">偏胖</text>
+			</view>
+			<view class="row c4">
+				<text class="col">27～29.9</text>
+				<text class="col">肥胖</text>
+			</view>
+			<view class="row c5">
+				<text class="col">≥30</text>
+				<text class="col">重度肥胖</text>
+			</view>
+		</view>
+
+		<!--国际标准-->
+		<view class="table" hidden="{{index!= 1}}">
+			<view class="row thead">
+				<text class="col">BMI值</text>
+				<text class="col">身体状况</text>
+			</view>
+			<view class="row c1">
+				<text class="col">{{charLt}}18.5</text>
+				<text class="col">偏瘦</text>
+			</view>
+			<view class="row c2">
+				<text class="col">18.5～24.9</text>
+				<text class="col">正常</text>
+			</view>
+			<view class="row c3">
+				<text class="col">25～29.9</text>
+				<text class="col">偏胖</text>
+			</view>
+			<view class="row c4">
+				<text class="col">30.0～34.9</text>
+				<text class="col">肥胖</text>
+			</view>
+			<view class="row c5">
+				<text class="col">35.0～39.9</text>
+				<text class="col">重度肥胖</text>
+			</view>
+			<view class="row c6">
+				<text class="col">≥40.0</text>
+				<text class="col">极重度肥胖</text>
+			</view>
+		</view>
+		<!--亚洲标准-->
+		<view class="table" hidden="{{index!= 2}}">
+			<view class="row thead">
+				<text class="col">BMI值</text>
+				<text class="col">身体状况</text>
+			</view>
+			<view class="row c1">
+				<text class="col">{{charLt}}18.5</text>
+				<text class="col">偏瘦</text>
+			</view>
+			<view class="row c2">
+				<text class="col">18.5～22.9</text>
+				<text class="col">正常</text>
+			</view>
+			<view class="row c3">
+				<text class="col">23～24.9</text>
+				<text class="col">偏胖</text>
+			</view>
+			<view class="row c4">
+				<text class="col">25～29.9</text>
+				<text class="col">肥胖</text>
+			</view>
+			<view class="row c5">
+				<text class="col">≥30</text>
+				<text class="col">重度肥胖</text>
+			</view>
+		</view>
+	</view>
+	<!-- <view class="weui-form" style="background: #f6f6f6;">
+		<view class="weui-form__extra-area ">
+			<view class="weui-footer">
+				<view class="weui-footer__links">
+					<view bindtap="copyLink" class="weui-footer__link">源自GitHub开源项目</view>
+				</view>
+				<text selectable="true" class="weui-footer__text">https://github.com/caizhenbo/BIM</text>
+			</view>
+		</view>
+	</view> -->
+</view>

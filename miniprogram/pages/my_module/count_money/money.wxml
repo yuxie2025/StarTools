@@ -1,0 +1,16 @@
+<view class="container" wx:if="{{!isRelease}}">
+  <view class="title" style="color: #333;">
+    <text style="margin-left:20rpx;">{{'时间: '+time+'s'}}</text>
+    <text style="margin-right:20rpx;">我有 <text style="color: orangered;">{{100*money}}</text> 元</text>
+  </view>
+  <view style="width:100%;">
+    <swiper bindchange="moreMoney" circular="{{true}}" style="width:100%;height:1200rpx;">
+      <swiper-item style="text-align:center;">
+        <image mode="widthFix" src="rmb.jpg" style="width:70%;"></image>
+      </swiper-item>
+      <swiper-item style="text-align:center;">
+        <image mode="widthFix" src="rmb.jpg" style="width:70%;"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

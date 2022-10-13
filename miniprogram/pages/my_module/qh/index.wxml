@@ -1,0 +1,13 @@
+<progress active="true" activeMode="forwards" color="#F69B30" percent="{{newprogress}}" style="display:{{isProgress}}"></progress>
+<view class="container">
+
+  <image class="bo" src="bo.png"></image>
+  <view class="progress">{{progress}}<image class="good" src="{{goodUrl}}" style="display:{{isGood}}"></image>
+  </view>
+  <text class="tip">{{tip}}</text>
+  <text class="tip2" style="display:{{isTip2}}">{{tip2}}</text>
+  <view class="btn">
+    <button bindtap="cleanNew" disabled="{{subing}}">{{btnData}}</button>
+  </view>
+  <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+</view>

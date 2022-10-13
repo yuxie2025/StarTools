@@ -1,0 +1,134 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.header {
+    padding: 0 56rpx;
+    width: calc(100% - 112rpx);
+    height: 200rpx;
+    z-index: 2;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    padding: 0 30rpx;
+    width: 640rpx;
+    height: 120rpx;
+    background: #fff;
+    box-shadow: 0rpx 4rpx 30rpx 10rpx rgba(0,0,0,0.03);
+    border-radius: 60rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons .divide {
+    width: 2rpx;
+    height: 56rpx;
+    background-color: #dfdfdf;
+}
+
+.buttons .button {
+    display: flex;
+    align-items: center;
+}
+
+.buttons .button image {
+    margin-right: 12rpx;
+    width: 44rpx;
+    height: 44rpx;
+}
+
+.buttons .button text {
+    font-size: 36rpx;
+    font-family: PingFangSC-Semibold,PingFang SC;
+    font-weight: 600;
+    color: rgba(74,74,74,1);
+    line-height: 50rpx;
+}
+
+.items {
+    width: 90%;
+    margin: 20rpx auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.items .item {
+    margin: 10rpx auto;
+    width: 100%;
+    height: 160rpx;
+    border-radius: 10rpx;
+    box-shadow: 0rpx 2rpx 20rpx 10rpx rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.items .item .desc {
+    padding: 0 20rpx;
+    width: calc(100% - 40rpx);
+    height: 68rpx;
+    background-color: rgb(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.item .desc .name {
+    font-family: PingFangSC-Semibold;
+    font-size: 32rpx;
+    color: #fff;
+    letter-spacing: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-left: 10rpx;
+    margin-right: 20rpx;
+    overflow: hidden;
+}
+
+.item .desc .time {
+    opacity: 0.6;
+    font-family: PingFangSC-Semibold;
+    font-size: 24rpx;
+    color: #fff;
+    letter-spacing: 0;
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 10rpx;
+}
+
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.empty .up {
+    margin: 22rpx 0 24rpx;
+    width: 34rpx;
+    height: 42rpx;
+}
+
+.empty .frame {
+    width: 504rpx;
+    height: 150rpx;
+    border-radius: 82rpx;
+    background-color: #cff0e3;
+    font-family: PingFangSC-Semibold;
+    font-size: 16px;
+    color: #22c688;
+    letter-spacing: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

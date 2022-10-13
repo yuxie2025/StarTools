@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="container">
+
+  <image class="bgImage" src="bg.png"></image>
+  <view class="content">
+
+    <button class="share_view" open-type="share">分享</button>
+
+    <view class="name_view">
+      {{dishName}}<view wx:if="{{dishName&&!isCustom}}" class="add" bindtap="add">添加</view>
+    </view>
+
+    <view class="btns_view">
+      <block wx:for="{{buttons}}" wx:key="buttons">
+        <button class='{{item.checked?"checked_button":"normal_button"}}' data-id="{{item}}" bindtap="clickItem">{{item.name}}</button>
+      </block>
+    </view>
+
+    <view class="btn_view">
+      <button class="btn" bindtap="exec">
+        {{btnName}}
+      </button>
+      <button class="btn custom" bindtap="custom" wx:if="{{isCustom}}">
+        自定义
+      </button>
+      <button class="btn more_tools" bindtap="jump" wx:if="{{isShowMoreTools}}">
+        专业版
+      </button>
+    </view>
+  </view>
+
+  <view style="position: absolute; bottom: 40rpx;width: 96%;">
+    <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+  </view>
+</view>

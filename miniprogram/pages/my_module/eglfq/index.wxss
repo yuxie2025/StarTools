@@ -1,0 +1,29 @@
+.page__bd {
+    text-align: center;
+    width: 100%;
+}
+
+.page__bd,page {
+    height: 100%;
+}
+
+.page__bd image {
+    height: 90%;
+    margin: 0 auto;
+    width: 354rpx;
+}
+
+.back_default {
+    border-radius: 50%;
+    bottom: 70rpx;
+    color: #000;
+    font-size: 28rpx;
+    height: 108rpx;
+    line-height: 108rpx;
+    margin: 0 8rpx 54rpx 0;
+    position: fixed;
+    right: 20rpx;
+    text-align: center;
+    width: 108rpx;
+    z-index: 999;
+}

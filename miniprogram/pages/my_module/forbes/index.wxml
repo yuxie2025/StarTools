@@ -1,0 +1,34 @@
+<!--pages/home/info/index.wxml-->
+<wxs module="filters" src="../../utils/filter.wxs"></wxs>
+<view wx:if="{{!isRelease}}">
+  <view class="top_info">
+    <view>❤❤福布斯_土豪榜_100名_实时更新❤❤</view>
+  </view>
+  <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+  <view class="items-list-wrap wr-class">
+    <block wx:for="{{itemsList}}" wx:for-item="item" wx:key="index">
+      <view wx:if="{{index==0}}" class="line"></view>
+      <view class="item-list-wrap" data-id="{{item}}" bind:tap="clickItem">
+        <image class="item_pic" src="{{item.squareImage}}" data-index='{{index}}' binderror="imageOnloadError" />
+        <text class="item_name">{{index+1}}. {{item.personName}}</text>
+        <text class="item_price">{{filters.toFix(item.estWorthPrev/100,0)}}$</text>
+        <text class="item_state">{{item.countryOfCitizenship}}</text>
+        <text class="item_age">{{item.age}}岁</text>
+      </view>
+      <view class="line"></view>
+    </block>
+  </view>
+</view>
+<!--弹窗-->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">{{dialogTitle}}</view>
+  <view class="modal-content">
+    <text class="modal-text-content">
+      {{dialogContent}}
+    </text>
+  </view>
+  <view class="modal-footer">
+    <view class="btn-confirm" bindtap="hideModal" data-status="confirm">确定</view>
+  </view>
+</view>

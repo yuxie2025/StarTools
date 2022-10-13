@@ -1,0 +1,91 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/home/info/index",
+    "pages/home/me/index",
+    "pages/my_module/get_image/index",
+    "pages/my_module/flag/index",
+    "pages/my_module/forbes/index",
+    "pages/my_module/eat/index",
+    "pages/my_module/eat/edit_eat",
+    "pages/my_module/money/index",
+    "pages/my_module/qh/index",
+    "pages/my_module/calc_relative/index",
+    "pages/my_module/calc/index",
+    "pages/my_module/calc_mortgage/index",
+    "pages/my_module/calc_mortgage/detail",
+    "pages/my_module/bmi/bmi",
+    "pages/my_module/bigWheel/bigWheel",
+    "pages/my_module/bigWheel/bigWheelSetting/bigWheelSetting",
+    "pages/my_module/bigWheel/chooseItem/chooseItem",
+    "pages/my_module/bigWheel/edit/edit",
+    "pages/my_module/2048/2048",
+    "pages/my_module/screenshotConnect/screenshotConnect",
+    "pages/my_module/screenshotConnect/showImage",
+    "pages/my_module/danmu/danmu",
+    "pages/my_module/danmu/show_danmu",
+    "pages/my_module/ruler/ruler",
+    "pages/my_module/cuttingNine/cuttingNine",
+    "pages/my_module/createQrcode/createQrcode",
+    "pages/my_module/scanQrcode/scanQrcode",
+    "pages/my_module/calc_size/index",
+    "pages/my_module/ip_info/index",
+    "pages/my_module/count_money/money",
+    "pages/my_module/blood/blood",
+    "pages/my_module/zhendong/index",
+    "pages/my_module/life_time/life_time",
+    "pages/my_module/eglfq/index",
+    "pages/my_module/blind/blind",
+    "pages/my_module/clock/clock",
+    "pages/my_module/countDown/countDown",
+    "pages/my_module/timejs/add",
+    "pages/my_module/timejs/detail",
+    "pages/my_module/timejs/index",
+    "pages/my_module/randomNum/randomNum",
+    "pages/my_module/phone/phone",
+    "pages/my_module/protractor/protractor",
+    "pages/my_module/networkSpeed/networkSpeed",
+    "pages/my_module/yueyu/index",
+    "pages/my_module/quse/color",
+    "pages/my_module/quse/detail",
+    "pages/my_module/quse/index",
+    "pages/my_module/crypt/crypt",
+    "pages/my_module/crypt/decrypt"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#FF5F15",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/ic_home.png",
+        "selectedIconPath": "images/ic_home_select.png",
+        "text": "主页"
+      },
+      {
+        "pagePath": "pages/home/info/index",
+        "iconPath": "images/ic_info.png",
+        "selectedIconPath": "images/ic_info_select.png",
+        "text": "资讯"
+      },
+      {
+        "pagePath": "pages/home/me/index",
+        "iconPath": "images/ic_me.png",
+        "selectedIconPath": "images/ic_me_select.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "__warning__": "无效的 app.json [\"runmode\"]",
+  "usingComponents": {}
+}

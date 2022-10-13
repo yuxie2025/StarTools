@@ -1,0 +1,14 @@
+<view class="container" wx:if="{{!isRelease}}">
+  <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+  <view class="container image">
+    <image class="image" src='{{imageSrc}}' mode="aspectFit"></image>
+  </view>
+  <view class="btns_view">
+    <button class="btn cartoon" data-id="3" bindtap="getPic">卡通</button>
+    <button class="btn cartoon_people" data-id="4" bindtap="getPic">卡通人</button>
+    <button class="btn scenery" data-id="2" bindtap="getPic">风景</button>
+    <!-- <button class="btn dog" data-id="1" bindtap="getPic">一条狗</button>
+    <button class="btn cat" data-id="0" bindtap="getPic">一只猫</button> -->
+  </view>
+  <button wx:if="{{imageSrc!=''}}" class="btn_save" type="primary" bindtap="saveImage">保存到相册</button>
+</view>

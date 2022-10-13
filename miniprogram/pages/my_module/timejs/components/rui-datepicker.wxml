@@ -1,0 +1,37 @@
+<view class="datepicker_shade {{isShow?'datepicker_shade_active':''}}"></view>
+<view catchtouchmove="handleStop" class="datepicker_wrap {{isShow?'datepicker_wrap_active':''}}">
+    <view class="datepicker_topinfo">{{!hiddenConfirm?'确认日期':lunarTab?returnDate.lunarStr:returnDate.solarStr}}</view>
+    <view class="datepicker_select" hidden="{{!hiddenConfirm}}">
+        <view class="datepicker_class">
+            <view bindtap="_solarLunarChange" class="{{lunarTab?'':'active'}}" data-type="solar">公历</view>
+            <view bindtap="_solarLunarChange" class="{{lunarTab?'active':''}}" data-type="lunar">农历</view>
+        </view>
+        <picker-view bindchange="_pickerChange" class="select_wrap" indicatorClass="column_class" indicatorStyle="height:40px" value="{{selectArr}}">
+            <picker-view-column>
+                <view style="line-height: 40px;" wx:for="{{yearArr}}" wx:key="id">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view style="line-height: 40px;" wx:for="{{monthArr}}" wx:key="id">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column>
+                <view style="line-height: 40px;" wx:for="{{dayArr}}" wx:key="id">{{item}}</view>
+            </picker-view-column>
+            <picker-view-column wx:if="{{config.showHour}}">
+                <view style="line-height: 40px;" wx:for="{{hourArr}}" wx:key="id">{{item}}</view>
+            </picker-view-column>
+        </picker-view>
+    </view>
+    <view class="datepicker_confirm" hidden="{{hiddenConfirm}}">
+        <view class="tip">请确认输入的时间是否正确</view>
+        <view class="p">
+            <text>{{returnDate.solarStr}}</text>
+        </view>
+        <view class="p">
+            <text>{{returnDate.lunarStr}}</text>
+        </view>
+    </view>
+    <view class="datepicker_bottom">
+        <view bindtap="_cancel">{{hiddenConfirm?'取消':'返回修改'}}</view>
+        <view bindtap="confirm">{{hiddenConfirm?'完成':'确认'}}</view>
+    </view>
+</view>

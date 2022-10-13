@@ -1,0 +1,22 @@
+<!--pages/home/info/index.wxml-->
+<wxs module="filters" src="../../utils/filter.wxs"></wxs>
+<view>
+  <view class="top_info">
+    <view>❤❤小程序永久免费,欢迎添加-防止丢失❤❤</view>
+  </view>
+  <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+
+  <view class="items-list-wrap wr-class">
+  <block wx:for="{{itemsList}}" wx:for-item="item" wx:key="index" >
+    <view wx:if="{{index==0}}" class="line"></view>
+    <view class="item-list-wrap" data-id="{{item}}" bind:tap="selectTop">
+        <text class="item_name">{{item.name}}</text>
+        <text class="item_price">{{item.price}}</text>
+        <text class="item_ratio" wx:if="{{item.ratio<0}}" style="color: #f00;">{{filters.toFix(item.ratio*100,2)}}%</text>
+        <text class="item_ratio" wx:else style="color: #090;">{{filters.toFix(item.ratio*100,2)}}%</text>
+    </view>
+    <view class="line"></view>
+  </block>
+</view>
+
+</view>

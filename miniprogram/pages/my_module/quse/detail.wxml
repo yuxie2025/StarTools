@@ -1,0 +1,54 @@
+<view class="container {{iPhoneX?'iphone-x':''}}" style="background-color:{{color.hex}}">
+  <view class="content">
+    <view class="header">
+      <view class="time">{{color.time}}</view>
+    </view>
+    <view class="name">{{color.name}}</view>
+    <view catchtap="onCopyTap" class="item" data-item="{{color.hex}}" hoverClass="hover">
+      <view class="left">
+        <view class="label">HEX</view>
+        <view class="value">{{color.hex}}</view>
+      </view>
+      <image class="copy" src="copy.svg"></image>
+    </view>
+    <view catchtap="onCopyTap" class="item" data-item="{{color.rgb}}" hoverClass="hover">
+      <view class="left">
+        <view class="label">RGB</view>
+        <view class="value">{{color.rgb}}</view>
+      </view>
+      <image class="copy" src="copy.svg"></image>
+    </view>
+    <view catchtap="onCopyTap" class="item" data-item="{{color.cmyk}}" hoverClass="hover">
+      <view class="left">
+        <view class="label">CMYK</view>
+        <view class="value">{{color.cmyk}}</view>
+      </view>
+      <image class="copy" src="copy.svg"></image>
+    </view>
+    <view catchtap="onCopyTap" class="item" data-item="{{color.hsb}}" hoverClass="hover">
+      <view class="left">
+        <view class="label">HSB</view>
+        <view class="value">{{color.hsb}}</view>
+      </view>
+      <image class="copy" src=copy.svg"></image>
+    </view>
+  </view>
+</view>
+<view class="toolbar {{iPhoneX?'iphone-x':''}}">
+  <view catchtap="onDeleteTap" class="button gray" hoverClass="hover" wx:if="{{!share}}">
+    <image src="delete-in-button.svg"></image>
+    <text>删除</text>
+  </view>
+  <button class="button" hoverClass="hover" openType="share" style="margin:0;width: 240rpx;">
+    <image src="share-in-button.svg"></image>
+    <text>分享颜色</text>
+  </button>
+  <view catchtap="onCollectTap" class="button fill" hoverClass="hover" wx:if="{{share&&!collected}}">
+    <image src="collect-in-button.svg"></image>
+    <text>收藏颜色</text>
+  </view>
+  <view catchtap="onGoHomeTap" class="button fill" hoverClass="hover" wx:if="{{collected}}">
+    <image src="home-in-button.svg"></image>
+    <text>回首页</text>
+  </view>
+</view>

@@ -1,0 +1,29 @@
+<view wx:if="{{!isRelease}}">
+  <view bindtap="changeTranslateType" class="translate-type">
+    <text>{{translateType[0]==='zh'?'中文':'粤语'}}</text>
+    <image src="fy_jh.png"></image>
+    <text>{{translateType[1]==='zh'?'中文':'粤语'}}</text>
+  </view>
+  <form bindreset="clearWord" bindsubmit="translateWord" reportSubmit="true">
+    <view class="textarea-out input-wrapper word-wrapper">
+      <textarea bindinput="textAreaInput" maxlength="100" name="translateWord" placeholder="请输入要翻译的文字"></textarea>
+      <view class="textarea-in">
+        <view bindtap="handleSoundPlay" class="sound-play {{originAudioPlaying?'on':''}}" data-type="origin"></view>
+        <button class="clear-btn input-residue" formType="reset">清除</button>
+      </view>
+    </view>
+    <view class="translate-btns">
+      <button class="translate-btn base-btn" formType="submit">翻译</button>
+    </view>
+  </form>
+  <view class="translate-title">翻译结果:</view>
+  <view bindlongtap="copyTranslatedWord" class="translate-wrapper word-wrapper translate-result"> {{translatedWord}}
+    <view bindtap="handleSoundPlay" class="sound-play sound-play-result {{resultAudioPlaying?'on':''}}" data-type="result"></view>
+    <view bindtap="copyTranslatedWord" class="copy">复制</view>
+  </view>
+  <view class="index-btns"></view>
+
+  <view style="width: 100%;margin: 20rpx auto;">
+    <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+  </view>
+</view>

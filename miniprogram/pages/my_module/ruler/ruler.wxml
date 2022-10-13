@@ -1,0 +1,5 @@
+<canvas canvasId="ruler" class="ruler" style="width:{{width}}px;height:{{height}}px"></canvas>
+<view class="show_tip">小提示:如果测量有误差,可以调整分辨率系数校对</view>
+<view class="show">分辨率系数：{{coefficient}}</view>
+<slider activeColor="#08e037" bindchange="changeCoefficient" blockColor="#08e037" class="slider" max="70" min="30" value="{{coefficient}}"></slider>
+<view bindtap="reset" class="button" hoverClass="button-hover">重置</view>

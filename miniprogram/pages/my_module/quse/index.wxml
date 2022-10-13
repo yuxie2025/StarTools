@@ -1,0 +1,30 @@
+<view class="container">
+    <view class="header">
+        <view class="buttons">
+            <view catchtap="onPhotoTap" class="button">
+                <image src="photo.svg"></image>
+                <text>拍照取色</text>
+            </view>
+            <view class="divide"></view>
+            <view catchtap="onAlbumTap" class="button">
+                <image src="album.svg"></image>
+                <text>相册取色</text>
+            </view>
+        </view>
+    </view>
+    <view class="items" wx:if="{{items.length>0}}">
+        <view catchtap="onItemTap" class="item" data-color="{{item}}" style="background-color:{{item.hex}};" wx:for="{{items}}" wx:key="*this">
+            <view class="desc">
+                <view class="name">{{item.name}}</view>
+                <view class="time">{{item.time}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="empty" wx:else>
+        <image class="up" src="up.svg"></image>
+        <view class="frame">
+            <text>还没有收藏的颜色呢</text>
+            <text>快开始色彩之旅吧</text>
+        </view>
+    </view>
+</view>

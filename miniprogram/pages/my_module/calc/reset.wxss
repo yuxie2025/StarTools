@@ -1,0 +1,19 @@
+/*小程序给默认组件提供了类似weui的样式，这里将这些样式reset掉*/
+
+button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+  user-select: none;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); 
+  border-radius: 0;
+}
+
+button::after {
+  display: none;
+}

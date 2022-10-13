@@ -1,0 +1,7 @@
+{
+    "disableScroll": true,
+    "usingComponents": {},
+    "navigationBarBackgroundColor": "#454545",
+    "navigationBarTitleText": "随机数字",
+    "navigationBarTextStyle": "white"
+}

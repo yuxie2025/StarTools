@@ -1,0 +1,32 @@
+<view class="page container">
+    <view class="org-section padding-xl radius shadow-warp bg-white margin-top" wx:if="{{org}}">
+        <textarea bindinput="onInput" class="org-text" disabled="{{inprogress}}" name="orgText" placeholder="请输入要解密文本" rows="6" value="{{encText}}">
+            <view class="btn-area">
+                <button bindtap="onPaste" class="my-btn" disabled="{{encText.length>0}}">一键粘贴</button>
+                <button bindtap="onClean" class="my-btn">清空内容</button>
+            </view>
+        </textarea>
+        <view class="secret-area">
+            <view class="secret-input-area">
+                <input bindinput="onSecret" class="secret-input" maxlength="16" name="secret" password="{{!showPassword}}" placeholder="请输入密钥" value="{{secret}}"></input>
+                <image bindtap="showPassword" class="show-password-icon" src="eye-close.png" wx:if="{{!showPassword}}"></image>
+                <image bindtap="showPassword" class="show-password-icon" src="eye.png" wx:if="{{showPassword}}"></image>
+            </view>
+        </view>
+        <button bindtap="dec" class="start-btn">解密</button>
+    </view>
+    <view class="dec-section padding-xl radius shadow-warp bg-white margin-top" style="margin:10% auto;border-radius:20rpx;width:95%;" wx:if="{{!org}}">
+        <textarea class="org-text" disabled="true" maxlength="0" name="decText" placeholder="解密结果" value="{{decText}}">
+            <view class="btn-area">
+                <button bindtap="copyToClipBoard" class="my-btn">复制内容</button>
+            </view>
+        </textarea>
+        <button bindtap="back" class="start-btn">返回</button>
+    </view>
+</view>
+<button bindtap="qjm" class="start-btn">去加密</button>
+<view style="font-size:25rpx;text-align:left;margin:5%;">说明：本工具使用AES算法对文本进行加密解密，没有密钥，任何人无法查看加密内容(本工具完全本地进行加解密).</view>
+
+<view style="width: 96%;margin: 20rpx auto;">
+  <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+</view>

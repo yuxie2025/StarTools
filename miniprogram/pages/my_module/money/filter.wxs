@@ -1,0 +1,19 @@
+var filters = {
+  toFix: function (value,length) {
+    return value.toFixed(length) // 此处2为保留两位小数，保留几位小数，这里写几    
+  },
+
+  toStr: function (value) {
+    return value.toString()
+  },
+
+  toNum: function (value) {
+    return value.toNumber()
+  },
+}
+
+module.exports = {
+  toFix: filters.toFix,
+  toStr: filters.toStr,
+  toNum: filters.toNum, //暴露接口调用
+}

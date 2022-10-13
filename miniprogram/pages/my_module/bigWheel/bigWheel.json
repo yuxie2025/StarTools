@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "zhuanpan": "/components/zhuanpan/zhuanpan"
+ },
+ "navigationBarTitleText": "偏心大转盘",
+ "navigationBarBackgroundColor": "#efefef"
+}

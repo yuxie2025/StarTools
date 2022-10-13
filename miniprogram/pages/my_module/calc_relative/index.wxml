@@ -1,0 +1,36 @@
+<view class="container">
+    <textarea class="textstyle" disabled="true" maxlength="34" value="{{screenData}}"></textarea>
+</view>
+<view class="container">
+    <textarea class="result-style" disabled="true" style="text-align:right" value="{{result}}"></textarea>
+</view>
+<view class="body-view">
+      男
+      <switch class="switch" bindchange="switchChange"></switch>
+      女
+  </view>
+<view class="second">
+    <view class="btnGroup">
+        <view bindtap="clickButton" class="item normal" id="{{id1}}">夫</view>
+        <view bindtap="clickButton" class="item normal" id="{{id2}}">妻</view>
+        <view bindtap="clickButton" class="item normal" id="{{id3}}">删除</view>
+        <view bindtap="clickButton" class="item normal-orange" id="{{id4}}">清空</view>
+    </view>
+    <view class="btnGroup">
+        <view bindtap="clickButton" class="item normal" id="{{id5}}">父</view>
+        <view bindtap="clickButton" class="item normal" id="{{id6}}">母</view>
+        <view bindtap="clickButton" class="item normal" id="{{id7}}">兄</view>
+        <view bindtap="clickButton" class="item normal" id="{{id8}}">弟</view>
+    </view>
+    <view class="btnGroup">
+        <view bindtap="clickButton" class="item normal" id="{{id9}}">姐</view>
+        <view bindtap="clickButton" class="item normal" id="{{id10}}">妹</view>
+        <view bindtap="clickButton" class="item normal" id="{{id11}}">子</view>
+        <view bindtap="clickButton" class="item normal" id="{{id12}}">女</view>
+    </view>
+    <view class="btnGroup">
+        <view bindtap="clickButton" class="item normal" id="{{id15}}">赞赏</view>
+        <view bindtap="clickButton" class="item normal" id="{{id13}}">互查</view>
+        <view bindtap="clickButton" class="item2 orange" id="{{id14}}">=</view>
+    </view>
+</view>

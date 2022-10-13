@@ -1,0 +1,13 @@
+<view class="body">
+    <view class="detail" style="background: linear-gradient(to right, {{datail.bgColor.left}},{{datail.bgColor.right}});color:{{datail.textColor}}">
+        <view class="name">{{datail.name}}</view>
+        <view class="time" wx:if="{{datail.lastTab=='solar'}}">{{datail.gongli}}</view>
+        <view class="time" wx:else>{{datail.nongli}}</view>
+        <view class="text" wx:if="{{overTime}}">剩余</view>
+        <view class="text" wx:else>已过去</view>
+        <view class="endTime">{{difftime}}</view>
+    </view>
+    <view class="btn">
+        <view bindtap="tomodification" class="modification">修改</view>
+    </view>
+</view>

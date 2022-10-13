@@ -1,0 +1,20 @@
+<view class="index" wx:if="{{!isRelease}}">
+    <view class="body">
+        <view class="widgets">
+            <view class="widgets__item" wx:for="{{list}}" wx:key="index">
+                <view bindtap="widgetsToggle" class="widgets__info {{item.open?'widgets__info_show':''}}" id="{{item.id}}">
+                    <text class="widgets__info-name">{{item.name}}</text>
+                    <image class="widgets__info-img" mode="aspectFill" src="arrowright.png"></image>
+                </view>
+                <view class="widgets__list {{item.open?'widgets__list_show':''}}">
+                    <view bindtap="callPhone" class="widget" data-phone="{{item.phone[index]}}" hoverStartTime="10" hoverStayTime="100" wx:for="{{item.subName}}" wx:for-item="name" wx:key="index">
+                        <text class="widget__name">{{name}}</text>
+                        <text class="phoneText">{{item.phone[index]}}</text>
+                        <image class="widget__arrow" mode="aspectFill" src="phone.png"></image>
+                        <view class="widget__line {{index==0?'widget__line_first':''}}"></view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

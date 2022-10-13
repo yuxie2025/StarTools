@@ -1,0 +1,27 @@
+<scroll-view class="body" scrollX="{{false}}" scrollY="{{true}}">
+    <view bindlongtap="longTapDel" bindtap="toDetail" bindtouchend="moveEnd" bindtouchmove="moveing" bindtouchstart="moveStart" class="item" data-index="{{index}}" style="margin-bottom:30rpx;background: linear-gradient(to right, {{item.bgColor.left}},{{item.bgColor.right}});color:{{item.textColor}};position: relative;left:-{{index==delIndex?moveX:'0'}}rpx;" wx:for="{{memorandumList}}" wx:key="index">
+        <view class="item_top">
+            <view class="item_name">{{item.name}}</view>
+            <view class="item_time">{{item.tempTimestamp}}</view>
+        </view>
+        <view class="item_bottm">
+            <view class="item_endTime" wx:if="{{item.lastTab=='solar'}}">{{item.gongli}}</view>
+            <view class="item_endTime" wx:else>{{item.nongli}}</view>
+            <view class="item_text" wx:if="{{item.overTime}}">剩余</view>
+            <view class="item_text" wx:else>已过去</view>
+        </view>
+        <view catchtap="del" class="delBtn" wx:if="{{moveX>10&&index==delIndex}}">删除</view>
+    </view>
+    <view bindtap="addItem" class="item add_item">
+        <view class="item_top">
+            <view class="item_name"></view>
+            <view class="item_time"></view>
+        </view>
+        <view class="item_bottm ">
+            <view class="item_endTime" wx:if="{{item.lastTab=='solar'}}"></view>
+            <view class="item_endTime" wx:else></view>
+            <view class="item_text"></view>
+        </view>
+    </view>
+</scroll-view>
+<view style="margin:5% auto;text-align:center;font-size:28rpx;color: #636363;">数据存储在本机,删除小程序会同时删除记录</view>

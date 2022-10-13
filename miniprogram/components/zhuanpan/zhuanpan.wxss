@@ -1,0 +1,94 @@
+/* components/zhuanpan/zhuanpan.wxss */
+
+.canvas-container {
+   margin: 0 auto;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.gb-wheel-run {
+   box-shadow: 0 0 5rpx 0rpx rgba(0, 0, 0, 0.98);
+   width: 700rpx;
+   height: 700rpx;
+   border-radius: 50%;
+   border: 30rpx solid #f1ecec;
+   box-sizing: border-box;
+   position: absolute;
+   left: 27rpx;
+   top: -19rpx;
+   opacity: 0.7;
+}
+
+.gb-wheel-content {
+   position: relative;
+   margin: 0 auto;
+   z-index: 2;
+   width: 659rpx;
+   height: 660rpx;
+   border-radius: 50%;
+   border: 20rpx solid #f1ecec;
+   box-shadow: 0 0 5rpx 0rpx rgba(0, 0, 0, 0.98);
+   opacity: 0.7;
+   overflow: hidden;
+}
+
+.canvas-list {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: inherit;
+   height: inherit;
+   z-index: 8;
+}
+
+.canvas-item2 {
+   position: absolute;
+   left: 0px;
+   top: 0;
+   width: 660rpx;
+   height: 328rpx;
+   color: #e4370e;
+   font-weight: bold;
+   transform-origin: 330rpx 330rpx;
+   overflow: hidden;
+}
+
+.canvas-item2-after {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 330rpx;
+   height: 330rpx;
+   transform-origin: 330rpx 330rpx;
+   opacity: 1;
+}
+
+.gb-wheel-list {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 9;
+}
+
+.gb-wheel-item {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   color: #fff;
+   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+}
+
+.gb-wheel-icontent {
+   position: relative;
+   display: block;
+   padding-top: 50rpx;
+   margin: 0 auto;
+   text-align: center;
+   transform-origin: 50% 328rpx;
+}

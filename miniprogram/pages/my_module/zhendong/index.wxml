@@ -1,0 +1,20 @@
+<view class="container"  wx:if="{{!isRelease}}">
+  <view style="height:500rpx;line-height: 500rpx;" animation="{{animation}}" class="oval">
+    <image mode="widthFix" src="4.png" style="width: 100%"></image>
+  </view>
+  
+  <view style="text-align: center;display:flex;justify-content:center;margin-top: 200rpx;">
+    <view bindtap="toCollect1" class="download" style="width: 35%;margin: 10px">
+      <image src="1.png" style="width: 120rpx; height: 120rpx" wx:if="{{isCollect1==false}}"></image>
+      <image src="run.png" style="width: 120rpx; height: 120rpx" wx:elif="{{isCollect1==true}}"></image>
+    </view>
+    <view bindtap="toCollect2" class="download" style="width: 35%;margin: 10px">
+      <image src="2.png" style="width: 120rpx; height: 120rpx" wx:if="{{isCollect2==false}}"></image>
+      <image src="run.png" style="width: 120rpx; height: 120rpx" wx:elif="{{isCollect2==true}}"></image>
+    </view>
+    <view bindtap="toCollect3" class="download" style="width: 35%;margin: 10px">
+      <image src="3.png" style="width: 120rpx; height: 120rpx" wx:if="{{isCollect3==false}}"></image>
+      <image src="run.png" style="width: 120rpx; height: 120rpx" wx:elif="{{isCollect3==true}}"></image>
+    </view>
+  </view>
+</view>

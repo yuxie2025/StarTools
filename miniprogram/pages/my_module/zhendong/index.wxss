@@ -1,0 +1,35 @@
+.userinfo {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.userinfo-avatar {
+    border-radius: 50%;
+    height: 128rpx;
+    margin: 20rpx;
+    width: 128rpx;
+}
+
+.userinfo-nickname {
+    color: #aaa;
+}
+
+.usermotto {
+    margin-top: 200px;
+}
+
+.oval {
+    width: 100%;
+}
+
+.circle {
+    border: 0 solid #fff;
+    border-radius: 500px;
+    height: 30px;
+    width: 30px;
+}
+
+.adContainer {
+    width: 100%;
+}

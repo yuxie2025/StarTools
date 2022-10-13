@@ -1,0 +1,21 @@
+<!--miniprogram/pages/bigWheel/bigWheel.wxml-->
+<view style="height:100%;" bindtap="reset">
+  <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+	<view style='width:100%;margin:10rpx auto;text-align:center;font-size:34rpx;margin-bottom:15rpx;'>标题: {{awardsConfig.option}}</view>
+	<view animation="{{resAnimation}}" style='width:100%;margin:0 auto;text-align:center;margin-bottom:20rpx;color:#1078e7;font-size:50rpx'>{{s_awards}}</view>
+
+	<!-- myAwards就是当被子组件触发时的函数 size:转盘大小 -->
+	<zhuanpan id='zhuanpan' bind:myData='getData' bind:myAwards="getAwards" bind:startZhuan="startZhuan" size='{{size}}' musicflg='{{musicflg}}' isLove='{{isLove}}' repeat='{{repeat}}' rotateTime='{{rotateTime}}' zhuanpanArr='{{xiaojuedingArr}}' awardsConfig='{{awardsConfig}}'>
+	</zhuanpan>
+	<view style='margin-top:30rpx'></view>
+	<view class='juedinoption' wx:for='{{myJueding}}' wx:key='key' wx:if='{{index<3 && share}}' bindtap='xiaojueding' data-idx='{{index}}'>{{item.option}}</view>
+</view>
+
+<view class="switchBtn">
+	<view class="switchItem" bindtap="toChoose">
+		<image src="{{bigWheel_edit_circle}}" mode="aspectFit" style="width:80rpx;height:80rpx" class="swithchItem"></image>
+	</view>
+	<view class="switchItem" bindtap="setting">
+		<image src="{{bigWheel_setting}}" mode="aspectFit" style="width:80rpx;height:80rpx" class="swithchItem"></image>
+	</view>
+</view>

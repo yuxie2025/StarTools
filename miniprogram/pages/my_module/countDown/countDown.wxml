@@ -1,0 +1,23 @@
+<view class="page">
+    <view class="mainBox">
+        <view class="box">
+            <picker bindchange="dateChange" mode="date">
+                <view class="title">距离{{goalDate}}</view>
+            </picker>
+            <view class="day">{{day}}<text>天</text>
+            </view>
+        </view>
+        <view id="countdown">
+            <view id="tiles">
+                <text>{{hours}}</text>
+                <text>{{minutes}}</text>
+                <text>{{seconds}}</text>
+            </view>
+            <view class="labels">
+                <view>时</view>
+                <view>分</view>
+                <view>秒</view>
+            </view>
+        </view>
+    </view>
+</view>

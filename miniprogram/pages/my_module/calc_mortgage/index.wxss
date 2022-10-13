@@ -1,0 +1,86 @@
+/**index.wxss**/
+
+.container{
+  padding: 20rpx;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40rpx;
+}
+
+.form-group.loan {
+  min-height: 160rpx;
+}
+
+.line {
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.loan {
+  flex-direction: row;
+}
+
+.loanItem {
+  width: 100%;
+}
+
+.totalLoan {
+  font-size: 50rpx;
+  margin-top: 10rpx;
+  padding-top: 30rpx;
+  height: 60rpx;
+}
+
+.double .totalLoan {
+  font-size: 32rpx;
+}
+
+.double .loanItem {
+  width: 46%;
+}
+
+.double .totalLoan {
+  padding-top: 20rpx;
+}
+
+.radioGroup {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.actions {
+  background: #fff;
+  width: 90%;
+  padding: 40rpx 6%;
+}
+
+.rate-section {
+  width: 100%;
+}
+
+.value-input {
+  width: 120rpx;
+  text-align: center;
+}
+
+.input-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 36rpx;
+  background: #ccc;
+  border-radius: 10rpx;
+  padding: 16rpx;
+}
+
+
+.question-icon {
+  height: 28rpx;
+  width: 28rpx;
+  padding-left: 5px;
+}

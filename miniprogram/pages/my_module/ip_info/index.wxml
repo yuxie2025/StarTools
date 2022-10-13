@@ -1,0 +1,22 @@
+<view class="view_input">
+  <input class="input" placeholder="请输入ip地址,例如:255.255.255.255" value="{{name}}" bindinput="bindKeyInput" />
+  <button class="button_search" type="primary" bindtap="bindTap">查询</button>
+</view>
+<view class="items">
+  <view class="item">
+    <view>目标:</view>
+    <text class="item_value" selectable>{{item.ip}}
+    </text>
+  </view>
+  <view class="item">
+    <view>ip归属:</view>
+    <text class="item_value" selectable>{{item.src}}
+    </text>
+  </view>
+  <!-- <view class="item">
+    <view>经纬度:</view>
+    <text class="item_value" selectable>{{item.latLong}}
+    </text>
+  </view> -->
+</view>
+<ad unit-id="{{bannerUnitId}}" ad-intervals="30" style="position: fixed; bottom: 50rpx;"></ad>

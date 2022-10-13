@@ -1,0 +1,64 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    padding: 15rpx;
+}
+
+.my-info {
+    background: #8ac6d1;
+    color: #3a3a3a;
+    font-size: 28rpx;
+    padding: 10rpx;
+}
+
+.xf {
+    bottom: 20%;
+}
+
+.my-tip {
+    color: #8a8a8a;
+    font-size: 28rpx;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10rpx;
+}
+
+picker {
+    margin-top: 15rpx;
+}
+
+.my-picker {
+    font-size: 62rpx;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.my-canvas,.my-share {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20rpx;
+}
+
+.my-share {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+
+.my-share-btn {
+    font-size: 35rpx;
+    margin-left: 0rpx;
+    margin-right: 0rpx;
+    padding: 0rpx;
+    text-align: center;
+    width: 200rpx;
+}
+
+button {
+    background-color: #fff;
+    color: #2c2c2c;
+}
+
+button::after {
+    border: none;
+}

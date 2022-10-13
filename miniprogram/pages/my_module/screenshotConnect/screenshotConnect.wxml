@@ -1,0 +1,11 @@
+<view class="images" wx:if="{{!isRelease}}">
+  <ad unit-id="{{bannerUnitId}}" ad-intervals="30"></ad>
+  <view bindtap="changePreview" class="preview-image" data-src="{{item.url}}" style="background-image:url({{item.url}});background-repeat:no-repeat;background-size:100% auto;" wx:for="{{imageInfo}}">
+    <view catchtap="removeImage" class="remove" data-index="{{index}}">移除{{index+1}}</view>
+  </view>
+  <view bindtap="previewImage" class="select-image" hoverClass="select-image-hover">选择图片</view>
+  <view class="bottom-tab">
+    <view bindtap="goToPage" class="tabBtn" data-direction="horizontal">横向拼接</view>
+    <view bindtap="goToPage" class="tabBtn" data-direction="vertical">竖向拼接</view>
+  </view>
+</view>

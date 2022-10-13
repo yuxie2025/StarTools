@@ -1,0 +1,1237 @@
+<!--index.wxml-->
+<view class="container">
+
+  <view class="section">
+    <picker bindchange="bindPickerChange" value="{{'id'}}" range="{{kdgs}}" range-key="{{'name'}}">
+      <view class="picker" style="text-align:left">
+        <view style="font-weight:bold;float:left;">计算类型：</view>{{kdgs[index].name}}（点击选择）
+      </view>
+    </picker>
+  </view>
+
+  <view class="fuzhuang">
+    <view wx:if="{{show_no!=1}}">
+      <input type="number" placeholder="{{tishi1}}" bindinput="get_shengao" style="text-align:left" />
+      <input type="number" placeholder="{{tishi2}}" bindinput="get_tizhong" style="text-align:left" />
+      <button type="primary" bindtap="btnClick">生成尺码</button>
+    </view>
+
+    <scroll-view scroll-y="true" style="height:auto;">
+      <view wx:if="{{chimaInfo}}" class="chimaInfo">
+        <view style="font-weight:bold;color:#000;">计算结果：</view>{{chimaInfo}}
+      </view>
+
+
+      <view class="cmb_con">
+        <view class="title">{{cm_title}}</view>
+        {{cm_table}}
+        <view class='mytable' wx:if="{{ci==3}}">
+          <view class='tr bg-g'>
+            <view class='td w22'>上衣尺码</view>
+            <view class='td'>S</view>
+            <view class='td'>M</view>
+            <view class='td'>L</view>
+            <view class='td'>XL</view>
+            <view class='td'>XXL</view>
+            <view class='td'>XXXL</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>服装尺码</view>
+            <view class='td'>36</view>
+            <view class='td'>38</view>
+            <view class='td'>40</view>
+            <view class='td'>42</view>
+            <view class='td'>44</view>
+            <view class='td'>46</view>
+          </view>
+
+          <view class='tr bg-g'>
+            <view class='td w22'>胸围/cm</view>
+            <view class='td'>79-82</view>
+            <view class='td'>83-86</view>
+            <view class='td'>87-90</view>
+            <view class='td'>91-94</view>
+            <view class='td'>95-98</view>
+            <view class='td'>99-103</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>腰围/cm</view>
+            <view class='td'>62-66</view>
+            <view class='td'>67-70</view>
+            <view class='td'>71-74</view>
+            <view class='td'>75-78</view>
+            <view class='td'>79-82</view>
+            <view class='td'>83-86</view>
+          </view>
+
+          <view class='tr bg-g'>
+            <view class='td w22'>肩宽/cm</view>
+            <view class='td'>37</view>
+            <view class='td'>38</view>
+            <view class='td'>39</view>
+            <view class='td'>40</view>
+            <view class='td'>41</view>
+            <view class='td'>42</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>身高</view>
+            <view class='td'>155</view>
+            <view class='td'>160</view>
+            <view class='td'>165</view>
+            <view class='td'>170</view>
+            <view class='td'>172</view>
+            <view class='td'>175</view>
+          </view>
+          <view class='tr bg-g'>
+            <view class='td w22'>胸围</view>
+            <view class='td'>82A</view>
+            <view class='td'>86A</view>
+            <view class='td'>90A </view>
+            <view class='td'>94A</view>
+            <view class='td'>98A</view>
+            <view class='td'>102A</view>
+          </view>
+        </view>
+
+
+        <view class='mytable' wx:if="{{ci==4}}">
+          <view class='tr bg-g'>
+            <view class='td w22'>衬衫尺码</view>
+            <view class='td'>S</view>
+            <view class='td'>M</view>
+            <view class='td'>L</view>
+            <view class='td'>XL</view>
+            <view class='td'>XXL</view>
+            <view class='td'>XXXL</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>国际尺码</view>
+            <view class='td'>36</view>
+            <view class='td'>37</view>
+            <view class='td'>38</view>
+            <view class='td'>39</view>
+            <view class='td'>40</view>
+            <view class='td'>41</view>
+          </view>
+
+          <view class='tr bg-g'>
+            <view class='td w22'>胸围/cm</view>
+            <view class='td'>79-82</view>
+            <view class='td'>83-86</view>
+            <view class='td'>87-90</view>
+            <view class='td'>91-94</view>
+            <view class='td'>95-98</view>
+            <view class='td'>99-103</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>腰围/cm</view>
+            <view class='td'>62-66</view>
+            <view class='td'>67-70</view>
+            <view class='td'>71-74</view>
+            <view class='td'>75-78</view>
+            <view class='td'>79-82</view>
+            <view class='td'>83-86</view>
+          </view>
+
+          <view class='tr bg-g'>
+            <view class='td w22'>肩宽/cm</view>
+            <view class='td'>37</view>
+            <view class='td'>38</view>
+            <view class='td'>39</view>
+            <view class='td'>40</view>
+            <view class='td'>41</view>
+            <view class='td'>42</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>身高</view>
+            <view class='td'>155</view>
+            <view class='td'>160</view>
+            <view class='td'>165</view>
+            <view class='td'>170</view>
+            <view class='td'>172</view>
+            <view class='td'>175</view>
+          </view>
+          <view class='tr bg-g'>
+            <view class='td w22'>胸围</view>
+            <view class='td'>82A</view>
+            <view class='td'>86A</view>
+            <view class='td'>90A </view>
+            <view class='td'>94A</view>
+            <view class='td'>98A</view>
+            <view class='td'>102A</view>
+          </view>
+        </view>
+
+
+        <view class='mytable qz_table' wx:if="{{ci==5}}">
+          <view class='tr bg-g'>
+            <view class='td w22'>裙子尺码</view>
+            <view class='td'>S</view>
+            <view class='td'>M</view>
+            <view class='td'>L</view>
+            <view class='td'>XL</view>
+            <view class='td'>XXL</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>服装尺码</view>
+            <view class='td'>36</view>
+            <view class='td'>38</view>
+            <view class='td'>40</view>
+            <view class='td'>42</view>
+            <view class='td'>44</view>
+          </view>
+
+          <view class='tr bg-g'>
+            <view class='td w22'>胸围/cm</view>
+            <view class='td'>79-82</view>
+            <view class='td'>83-86</view>
+            <view class='td'>87-90</view>
+            <view class='td'>91-94</view>
+            <view class='td'>95-98</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>腰围/cm</view>
+            <view class='td'>62-66</view>
+            <view class='td'>67-70</view>
+            <view class='td'>71-74</view>
+            <view class='td'>75-78</view>
+            <view class='td'>79-82</view>
+          </view>
+
+          <view class='tr bg-g'>
+            <view class='td w22'>肩宽/cm</view>
+            <view class='td'>37</view>
+            <view class='td'>38</view>
+            <view class='td'>39</view>
+            <view class='td'>40</view>
+            <view class='td'>41</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>身高</view>
+            <view class='td'>155</view>
+            <view class='td'>160</view>
+            <view class='td'>165</view>
+            <view class='td'>170</view>
+            <view class='td'>172</view>
+          </view>
+          <view class='tr bg-g'>
+            <view class='td w22'>胸围</view>
+            <view class='td'>82A</view>
+            <view class='td'>86A</view>
+            <view class='td'>90A </view>
+            <view class='td'>94A</view>
+            <view class='td'>98A</view>
+          </view>
+        </view>
+
+
+        <view class='mytable nkz_table' wx:if="{{ci==6}}">
+          <view class='tr bg-g'>
+            <view class='td w22'>女裤</view>
+            <view class='td'>裤子尺码</view>
+            <view class='td'>国标号型</view>
+            <view class='td'>对应臀围</view>
+            <view class='td'>对应腰围</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>S</view>
+            <view class='td'>25</view>
+            <view class='td'>155/62A</view>
+            <view class='td'>85</view>
+            <view class='td'>62</view>
+          </view>
+
+          <view class='tr bg-g'>
+            <view class='td w22'>S</view>
+            <view class='td'>26</view>
+            <view class='td'>159/64A</view>
+            <view class='td'>87.5</view>
+            <view class='td'>64.5</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>M</view>
+            <view class='td'>27</view>
+            <view class='td'>160/66A</view>
+            <view class='td'>90</view>
+            <view class='td'>67</view>
+          </view>
+
+          <view class='tr bg-g'>
+            <view class='td w22'>M</view>
+            <view class='td'>28</view>
+            <view class='td'>164/68A</view>
+            <view class='td'>92.5</view>
+            <view class='td'>69.5</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>L</view>
+            <view class='td'>29</view>
+            <view class='td'>165/70A</view>
+            <view class='td'>95</view>
+            <view class='td'>72</view>
+          </view>
+          <view class='tr bg-g'>
+            <view class='td w22'>L</view>
+            <view class='td'>30</view>
+            <view class='td'>169/72A</view>
+            <view class='td'>97.5 </view>
+            <view class='td'>74.5</view>
+          </view>
+
+          <view class='tr'>
+            <view class='td w22'>XL</view>
+            <view class='td'>31</view>
+            <view class='td'>170/74A</view>
+            <view class='td'>100</view>
+            <view class='td'>77</view>
+          </view>
+          <view class='tr bg-g'>
+            <view class='td w22'>XL</view>
+            <view class='td'>32</view>
+            <view class='td'>170/76A</view>
+            <view class='td'>102.5</view>
+            <view class='td'>79.5</view>
+          </view>
+        </view>
+
+
+        <view class='mytable' wx:if="{{ci==7}}">
+          <view class='tr bg-g'>
+            <view class='td w22'>上衣尺码</view>
+            <view class='td'>S</view>
+            <view class='td'>M</view>
+            <view class='td'>L</view>
+            <view class='td'>XL</view>
+            <view class='td'>XXL</view>
+            <view class='td'>XXXL</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>服装尺码</view>
+            <view class='td'>46</view>
+            <view class='td'>48</view>
+            <view class='td'>50</view>
+            <view class='td'>52</view>
+            <view class='td'>54</view>
+            <view class='td'>56</view>
+          </view>
+
+          <view class='tr bg-g zghx'>
+            <view class='td w22'>中国号型</view>
+            <view class='td'>165/80A</view>
+            <view class='td'>170/84A</view>
+            <view class='td'>175/88A</view>
+            <view class='td'>180/92A</view>
+            <view class='td'>185/96A</view>
+            <view class='td'>190/100A</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td w22'>胸围/cm</view>
+            <view class='td'>82-85</view>
+            <view class='td'>86-89</view>
+            <view class='td'>90-93</view>
+            <view class='td'>94-97</view>
+            <view class='td'>98-102</view>
+            <view class='td'>103-107</view>
+          </view>
+
+          <view class='tr bg-g'>
+            <view class='td w22'>腰围/cm</view>
+            <view class='td'>72-75</view>
+            <view class='td'>76-79</view>
+            <view class='td'>80-84</view>
+            <view class='td'>85-88</view>
+            <view class='td'>89-92</view>
+            <view class='td'>93-96</view>
+          </view>
+          <view class='tr'>
+            <view class='td w22'>肩宽/cm</view>
+            <view class='td'>42</view>
+            <view class='td'>44</view>
+            <view class='td'>46</view>
+            <view class='td'>48</view>
+            <view class='td'>50</view>
+            <view class='td'>52</view>
+          </view>
+          <view class='tr bg-g zghx'>
+            <view class='td w22'>适合身高/cm</view>
+            <view class='td'>163/167</view>
+            <view class='td'>168/172</view>
+            <view class='td'>173/177</view>
+            <view class='td'>178/182</view>
+            <view class='td'>182/187</view>
+            <view class='td'>187/190</view>
+          </view>
+        </view>
+
+
+        <view class='mytable' wx:if="{{ci==8}}">
+          <view class='tr bg-g zghx' style="padding-top:0rpx">
+            <view class='td w22'>上衣尺码</view>
+            <view class='td'>XS</view>
+            <view class='td'>S</view>
+            <view class='td'>M</view>
+            <view class='td'>L</view>
+            <view class='td'>XL</view>
+            <view class='td'>XXL</view>
+            <view class='td'>XXXL</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td w22'>衬衫尺码</view>
+            <view class='td'>37</view>
+            <view class='td'>38</view>
+            <view class='td'>39</view>
+            <view class='td'>40</view>
+            <view class='td'>41</view>
+            <view class='td'>42</view>
+            <view class='td'>43</view>
+          </view>
+
+          <view class='tr bg-g zghx'>
+            <view class='td w22'>国际型号</view>
+            <view class='td'>160/80A</view>
+            <view class='td'>165/84A</view>
+            <view class='td'>170/88A</view>
+            <view class='td'>175/92A</view>
+            <view class='td'>180/96A</view>
+            <view class='td'>180/100A</view>
+            <view class='td'>185/104A</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td w22'>胸围/cm</view>
+            <view class='td'>98-101</view>
+            <view class='td'>102-105</view>
+            <view class='td'>106-109</view>
+            <view class='td'>110-113</view>
+            <view class='td'>114-117</view>
+            <view class='td'>118-121</view>
+            <view class='td'>122-125</view>
+          </view>
+
+          <view class='tr bg-g zghx'>
+            <view class='td w22'>衣长</view>
+            <view class='td'>72</view>
+            <view class='td'>74</view>
+            <view class='td'>76</view>
+            <view class='td'>78</view>
+            <view class='td'>80</view>
+            <view class='td'>82</view>
+            <view class='td'>83</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td w22'>肩宽/cm</view>
+            <view class='td'>42-43</view>
+            <view class='td'>44-45</view>
+            <view class='td'>46-47</view>
+            <view class='td'>47-48</view>
+            <view class='td'>49-50</view>
+            <view class='td'>51-52</view>
+            <view class='td'>53-54</view>
+          </view>
+          <view class='tr bg-g'>
+            <view class='td w22'>身高/cm</view>
+            <view class='td'>160</view>
+            <view class='td'>165</view>
+            <view class='td'>170</view>
+            <view class='td'>175</view>
+            <view class='td'>180</view>
+            <view class='td'>185</view>
+            <view class='td'>190</view>
+          </view>
+        </view>
+
+        <view class='mytable xizhuang_table' wx:if="{{ci==9}}">
+          <view class='tr zghx'>
+            <view class='td'>尺码</view>
+            <view class='td'>规格</view>
+            <view class='td'>板型</view>
+            <view class='td'>衣长</view>
+            <view class='td'>胸围</view>
+            <view class='td'>肩宽</view>
+            <view class='td'>袖长</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>2R48</view>
+            <view class='td'>165/96C</view>
+            <view class='td'>偏胖</view>
+            <view class='td'>70</view>
+            <view class='td'>106</view>
+            <view class='td'>44.7</view>
+            <view class='td'>60</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>2R50</view>
+            <view class='td'>170/100C</view>
+            <view class='td'>偏胖</view>
+            <view class='td'>72</view>
+            <view class='td'>110</view>
+            <view class='td'>45.9</view>
+            <view class='td'>61.5</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>2R52</view>
+            <view class='td'>175/104C</view>
+            <view class='td'>偏胖</view>
+            <view class='td'>74</view>
+            <view class='td'>114</view>
+            <view class='td'>47.1</view>
+            <view class='td'>63</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>2R54</view>
+            <view class='td'>180/108C</view>
+            <view class='td'>偏胖</view>
+            <view class='td'>76</view>
+            <view class='td'>118</view>
+            <view class='td'>48.3</view>
+            <view class='td'>64.5</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>2R56</view>
+            <view class='td'>185/112C</view>
+            <view class='td'>偏胖</view>
+            <view class='td'>78</view>
+            <view class='td'>122</view>
+            <view class='td'>49.5</view>
+            <view class='td'>66</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>4R46</view>
+            <view class='td'>165/92B</view>
+            <view class='td'>标准</view>
+            <view class='td'>70</view>
+            <view class='td'>102</view>
+            <view class='td'>43.5</view>
+            <view class='td'>60</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>4R48</view>
+            <view class='td'>170/96B</view>
+            <view class='td'>标准</view>
+            <view class='td'>72</view>
+            <view class='td'>106</view>
+            <view class='td'>44.7</view>
+            <view class='td'>61.5</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>4R50</view>
+            <view class='td'>175/100B</view>
+            <view class='td'>标准</view>
+            <view class='td'>74</view>
+            <view class='td'>110</view>
+            <view class='td'>45.9</view>
+            <view class='td'>63</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>4R52</view>
+            <view class='td'>180/104B</view>
+            <view class='td'>标准</view>
+            <view class='td'>76</view>
+            <view class='td'>114</view>
+            <view class='td'>47.1</view>
+            <view class='td'>64.5</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>4R54</view>
+            <view class='td'>185/108B</view>
+            <view class='td'>标准</view>
+            <view class='td'>78</view>
+            <view class='td'>118</view>
+            <view class='td'>48.3</view>
+            <view class='td'>66</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>6R44</view>
+            <view class='td'>165/88A</view>
+            <view class='td'>偏瘦</view>
+            <view class='td'>70</view>
+            <view class='td'>98</view>
+            <view class='td'>42.3</view>
+            <view class='td'>60</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>6R46</view>
+            <view class='td'>170/92A</view>
+            <view class='td'>偏瘦</view>
+            <view class='td'>72</view>
+            <view class='td'>102</view>
+            <view class='td'>43.5</view>
+            <view class='td'>61.5</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>6R48</view>
+            <view class='td'>175/96A</view>
+            <view class='td'>偏瘦</view>
+            <view class='td'>74</view>
+            <view class='td'>106</view>
+            <view class='td'>44.7</view>
+            <view class='td'>63</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>6R50</view>
+            <view class='td'>180/100A</view>
+            <view class='td'>偏瘦</view>
+            <view class='td'>76</view>
+            <view class='td'>110</view>
+            <view class='td'>45.9</view>
+            <view class='td'>64.5</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>6R52</view>
+            <view class='td'>185/104A</view>
+            <view class='td'>偏瘦</view>
+            <view class='td'>78</view>
+            <view class='td'>114</view>
+            <view class='td'>47.1</view>
+            <view class='td'>66</view>
+          </view>
+        </view>
+
+
+        <view wx:if="{{ci==10}}">
+          <view class='mytable xizhuang_table'>
+            <view class='tr zghx'>
+              <view class='td'>男裤子尺码</view>
+              <view class='td'>S</view>
+              <view class='td'>S</view>
+              <view class='td'>M</view>
+              <view class='td'>M</view>
+              <view class='td'>L</view>
+              <view class='td'>L</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>男裤子尺码</view>
+              <view class='td'>170/72A</view>
+              <view class='td'>170/74A</view>
+              <view class='td'>170/76A</view>
+              <view class='td'>175/80A</view>
+              <view class='td'>175/82A</view>
+              <view class='td'>175/84A</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>裤子尺码(英寸)</view>
+              <view class='td'>29</view>
+              <view class='td'>30</view>
+              <view class='td'>31</view>
+              <view class='td'>32</view>
+              <view class='td'>33</view>
+              <view class='td'>34</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>对应臀围(cm)</view>
+              <view class='td'>97.5</view>
+              <view class='td'>100</view>
+              <view class='td'>102.5</view>
+              <view class='td'>105</view>
+              <view class='td'>107.5</view>
+              <view class='td'>110</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>对应腰围(cm)</view>
+              <view class='td'>73.7</view>
+              <view class='td'>76.2</view>
+              <view class='td'>78.7</view>
+              <view class='td'>81.3</view>
+              <view class='td'>83.8</view>
+              <view class='td'>86.4</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>腰围/市尺</view>
+              <view class='td'>2尺2寸</view>
+              <view class='td'>2尺3寸</view>
+              <view class='td'>2尺4寸</view>
+              <view class='td'>2尺4寸</view>
+              <view class='td'>2尺5寸</view>
+              <view class='td'>2尺6寸</view>
+            </view>
+          </view>
+          <view class='mytable xizhuang_table' style="margin-top:30rpx">
+            <view class='tr zghx'>
+              <view class='td'>男裤子尺码</view>
+              <view class='td'>XL</view>
+              <view class='td'>XL</view>
+              <view class='td'>XXL</view>
+              <view class='td'>XXL</view>
+              <view class='td'>XXXL</view>
+              <view class='td'>XXXL</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>男裤子尺码</view>
+              <view class='td'>180/86A</view>
+              <view class='td'>180/90A</view>
+              <view class='td'>185/92A</view>
+              <view class='td'>185/94B</view>
+              <view class='td'>190/98B</view>
+              <view class='td'>195/102B</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>裤子尺码(英寸)</view>
+              <view class='td'>35</view>
+              <view class='td'>36</view>
+              <view class='td'>37</view>
+              <view class='td'>38</view>
+              <view class='td'>40</view>
+              <view class='td'>42</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>对应臀围(cm)</view>
+              <view class='td'>112.5</view>
+              <view class='td'>100</view>
+              <view class='td'>117.5</view>
+              <view class='td'>120</view>
+              <view class='td'>122.5</view>
+              <view class='td'>130</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>对应腰围(cm)</view>
+              <view class='td'>89</view>
+              <view class='td'>91.4</view>
+              <view class='td'>93.3</view>
+              <view class='td'>96.5</view>
+              <view class='td'>101.6</view>
+              <view class='td'>106.6</view>
+            </view>
+            <view class='tr zghx'>
+              <view class='td'>腰围/市尺</view>
+              <view class='td'>2尺6寸</view>
+              <view class='td'>2尺7寸</view>
+              <view class='td'>2尺8寸</view>
+              <view class='td'>2尺9寸</view>
+              <view class='td'>3尺1寸</view>
+              <view class='td'>3尺2寸</view>
+            </view>
+          </view>
+        </view>
+
+
+        <view class='mytable tongzhuang_table' wx:if="{{ci==11}}">
+          <view class='tr'>
+            <view class='td'>年龄</view>
+            <view class='td'>尺码</view>
+            <view class='td'>身高</view>
+            <view class='td'>胸围</view>
+            <view class='td'>腰围</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>0-3个月</view>
+            <view class='td'>59</view>
+            <view class='td'>59</view>
+            <view class='td'>50</view>
+            <view class='td'>38</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>3-6个月</view>
+            <view class='td'>66</view>
+            <view class='td'>66</view>
+            <view class='td'>53</view>
+            <view class='td'>40</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>6-9个月</view>
+            <view class='td'>73</view>
+            <view class='td'>73</view>
+            <view class='td'>56</view>
+            <view class='td'>42</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>9-12个月</view>
+            <view class='td'>80</view>
+            <view class='td'>80</view>
+            <view class='td'>59</view>
+            <view class='td'>44</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>1-1.5岁</view>
+            <view class='td'>90</view>
+            <view class='td'>90</view>
+            <view class='td'>62</view>
+            <view class='td'>46</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>1.5岁-3岁</view>
+            <view class='td'>100</view>
+            <view class='td'>100</view>
+            <view class='td'>54</view>
+            <view class='td'>52</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>3岁-6岁</view>
+            <view class='td'>110</view>
+            <view class='td'>110</view>
+            <view class='td'>58</view>
+            <view class='td'>54</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>6岁-8岁</view>
+            <view class='td'>120</view>
+            <view class='td'>120</view>
+            <view class='td'>64</view>
+            <view class='td'>56</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>8岁-10岁</view>
+            <view class='td'>130</view>
+            <view class='td'>130</view>
+            <view class='td'>65</view>
+            <view class='td'>58</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>10岁-11岁</view>
+            <view class='td'>140</view>
+            <view class='td'>150</view>
+            <view class='td'>68</view>
+            <view class='td'>60</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>12岁-13岁</view>
+            <view class='td'>150</view>
+            <view class='td'>150</view>
+            <view class='td'>72</view>
+            <view class='td'>62</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>14岁-15岁</view>
+            <view class='td'>160</view>
+            <view class='td'>160</view>
+            <view class='td'>76</view>
+            <view class='td'>64</view>
+          </view>
+        </view>
+
+        <view class='mytable tongying_table' wx:if="{{ci==12}}">
+          <view class='tr'>
+            <view class='td'>尺码(cm)</view>
+            <view class='td'>59</view>
+            <view class='td'>66</view>
+            <view class='td'>73</view>
+            <view class='td'>80</view>
+            <view class='td'>90</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>年龄</view>
+            <view class='td'>0-3个月</view>
+            <view class='td'>3-6个月</view>
+            <view class='td'>6-9个月</view>
+            <view class='td'>9-12个月</view>
+            <view class='td'>1-1.5岁</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>身高</view>
+            <view class='td'>59</view>
+            <view class='td'>66</view>
+            <view class='td'>73</view>
+            <view class='td'>80</view>
+            <view class='td'>90</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>胸围</view>
+            <view class='td'>41</view>
+            <view class='td'>44</view>
+            <view class='td'>47</view>
+            <view class='td'>50</view>
+            <view class='td'>52</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>腰围</view>
+            <view class='td'>38</view>
+            <view class='td'>40</view>
+            <view class='td'>42</view>
+            <view class='td'>44</view>
+            <view class='td'>46</view>
+          </view>
+        </view>
+
+
+        <view class='mytable zhongtong_table' wx:if="{{ci==13}}">
+          <view class='tr'>
+            <view class='td'>尺码(cm)</view>
+            <view class='td'>100</view>
+            <view class='td'>110</view>
+            <view class='td'>120</view>
+            <view class='td'>130</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>年龄</view>
+            <view class='td'>1.5岁-3岁</view>
+            <view class='td'>3岁-6岁</view>
+            <view class='td'>6岁-8岁</view>
+            <view class='td'>8岁-10岁</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>身高</view>
+            <view class='td'>100</view>
+            <view class='td'>110</view>
+            <view class='td'>120</view>
+            <view class='td'>130</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>胸围</view>
+            <view class='td'>54</view>
+            <view class='td'>58</view>
+            <view class='td'>62</view>
+            <view class='td'>66</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>腰围</view>
+            <view class='td'>52</view>
+            <view class='td'>54</view>
+            <view class='td'>56</view>
+            <view class='td'>58</view>
+          </view>
+        </view>
+
+
+        <view class='mytable datong_table' wx:if="{{ci==14}}">
+          <view class='tr'>
+            <view class='td'>尺码(cm)</view>
+            <view class='td'>130</view>
+            <view class='td'>140</view>
+            <view class='td'>150</view>
+            <view class='td'>160</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>年龄</view>
+            <view class='td'>8岁-10岁</view>
+            <view class='td'>10岁-11岁</view>
+            <view class='td'>12岁-13岁</view>
+            <view class='td'>14岁-15岁</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>身高</view>
+            <view class='td'>130</view>
+            <view class='td'>140</view>
+            <view class='td'>150</view>
+            <view class='td'>160</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>胸围</view>
+            <view class='td'>66</view>
+            <view class='td'>69</view>
+            <view class='td'>73</view>
+            <view class='td'>78</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>腰围</view>
+            <view class='td'>58</view>
+            <view class='td'>60</view>
+            <view class='td'>62</view>
+            <view class='td'>64</view>
+          </view>
+        </view>
+
+        <view class='mytable wenxiong_table' wx:if="{{ci==15}}">
+          <view class='tr zghx'>
+            <view class='td'>下胸围(cm)</view>
+            <view class='td'>上胸围(cm)</view>
+            <view class='td'>国际尺码</view>
+            <view class='td'>下胸围(cm)</view>
+            <view class='td'>上胸围(cm)</view>
+            <view class='td'>国际尺码</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>68-72</view>
+            <view class='td'>80</view>
+            <view class='td'>32/70A</view>
+            <view class='td'>73-77</view>
+            <view class='td'>85</view>
+            <view class='td'>34/75A</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>68-72</view>
+            <view class='td'>83</view>
+            <view class='td'>32/70B</view>
+            <view class='td'>73-77</view>
+            <view class='td'>88</view>
+            <view class='td'>34/75B</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>68-72</view>
+            <view class='td'>85</view>
+            <view class='td'>32/70C</view>
+            <view class='td'>73-77</view>
+            <view class='td'>90</view>
+            <view class='td'>34/75C</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>68-72</view>
+            <view class='td'>88</view>
+            <view class='td'>32/70D</view>
+            <view class='td'>73-77</view>
+            <view class='td'>95</view>
+            <view class='td'>34/75D</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>68-72</view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+            <view class='td'>73-77</view>
+            <view class='td'>98</view>
+            <view class='td'>34/75E</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>下胸围(cm)</view>
+            <view class='td'>上胸围(cm)</view>
+            <view class='td'>国际尺码</view>
+            <view class='td'>下胸围(cm)</view>
+            <view class='td'>上胸围(cm)</view>
+            <view class='td'>国际尺码</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>78-82</view>
+            <view class='td'>90</view>
+            <view class='td'>36/80A</view>
+            <view class='td'>83-87</view>
+            <view class='td'>95-97</view>
+            <view class='td'>38/85A</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>78-82</view>
+            <view class='td'>93</view>
+            <view class='td'>36/80B</view>
+            <view class='td'>83-87</view>
+            <view class='td'>99-101</view>
+            <view class='td'>38/85B</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>78-82</view>
+            <view class='td'>95</view>
+            <view class='td'>36/80C</view>
+            <view class='td'>83-87</view>
+            <view class='td'>101-103</view>
+            <view class='td'>38/85C</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>78-82</view>
+            <view class='td'>98</view>
+            <view class='td'>36/80D</view>
+            <view class='td'>83-87</view>
+            <view class='td'>103-105</view>
+            <view class='td'>338/85D</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>78-82</view>
+            <view class='td'>103</view>
+            <view class='td'>36/80E</view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>下胸围(cm)</view>
+            <view class='td'>上胸围(cm)</view>
+            <view class='td'>国际尺码</view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+          </view>
+          <view class='tr'>
+            <view class='td'>88-92</view>
+            <view class='td'>103</view>
+            <view class='td'>40/90B</view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+          </view>
+          <view class='tr'>
+            <view class='td'>88-92</view>
+            <view class='td'>105</view>
+            <view class='td'>40/90C</view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+          </view>
+          <view class='tr'>
+            <view class='td'>88-92</view>
+            <view class='td'>108</view>
+            <view class='td'>40/90D</view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+          </view>
+          <view class='tr'>
+            <view class='td'>88-92</view>
+            <view class='td'>113</view>
+            <view class='td'>40/90E</view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+            <view class='td'> </view>
+          </view>
+        </view>
+
+
+
+        <view class='mytable neiku_table' wx:if="{{ci==16}}">
+          <view class='tr'>
+            <view class='td' style="width:100%">女式内裤</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>尺码</view>
+            <view class='td'>S</view>
+            <view class='td'>M</view>
+            <view class='td'>L</view>
+            <view class='td'>XL</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>腰围</view>
+            <view class='td'>55-61</view>
+            <view class='td'>61-67</view>
+            <view class='td'>67-73</view>
+            <view class='td'>73-79</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>腰围（市尺）</view>
+            <view class='td'>1.8-1.9</view>
+            <view class='td'>1.9-2.1</view>
+            <view class='td'>2.1-2.2</view>
+            <view class='td'>2.2-2.3</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>臀围</view>
+            <view class='td'>80-86</view>
+            <view class='td'>85-93</view>
+            <view class='td'>90-98</view>
+            <view class='td'>95-103</view>
+          </view>
+          <view class='tr'>
+            <view class='td' style="width:100%">男式内裤</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>尺码</view>
+            <view class='td'>M</view>
+            <view class='td'>L</view>
+            <view class='td'>XL</view>
+            <view class='td'>XXL</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>腰围</view>
+            <view class='td'>62-70</view>
+            <view class='td'>66-74</view>
+            <view class='td'>72-82</view>
+            <view class='td'>76-84</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>腰围（市尺）</view>
+            <view class='td'>2.0-2.2</view>
+            <view class='td'>2.2-2.4</view>
+            <view class='td'>2.4-2.5</view>
+            <view class='td'>&gt;2.6</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>臀围</view>
+            <view class='td'>82-90</view>
+            <view class='td'>86-94</view>
+            <view class='td'>88-96</view>
+            <view class='td'>94-102</view>
+          </view>
+          <view class='tr'>
+            <view class='td'>身高</view>
+            <view class='td'>160-170</view>
+            <view class='td'>165-175</view>
+            <view class='td'>170-180</view>
+            <view class='td'>175-185</view>
+          </view>
+        </view>
+
+
+
+        <view class='mytable neiku_table' wx:if="{{ci==17}}">
+          <view class='tr'>
+            <view class='td' style="width:100%">男鞋</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>脚长 cm</view>
+            <view class='td'>24.5</view>
+            <view class='td'>25</view>
+            <view class='td'>25.5</view>
+            <view class='td'>26</view>
+            <view class='td'>26.5</view>
+            <view class='td'>27</view>
+            <view class='td'>27.5</view>
+            <view class='td'>28</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>欧洲EUR</view>
+            <view class='td'>39 1/3</view>
+            <view class='td'>40</view>
+            <view class='td'>40 2/3</view>
+            <view class='td'>41 1/3</view>
+            <view class='td'>42</view>
+            <view class='td'>42 2/3</view>
+            <view class='td'>43 1/3</view>
+            <view class='td'>44</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>美国 US</view>
+            <view class='td'>6.5</view>
+            <view class='td'>7</view>
+            <view class='td'>7.5</view>
+            <view class='td'>8</view>
+            <view class='td'>8.5</view>
+            <view class='td'>9</view>
+            <view class='td'>9.5</view>
+            <view class='td'>10</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>英国 UK</view>
+            <view class='td'>6</view>
+            <view class='td'>6.5</view>
+            <view class='td'>7</view>
+            <view class='td'>7.5</view>
+            <view class='td'>8</view>
+            <view class='td'>8.5</view>
+            <view class='td'>9</view>
+            <view class='td'>9.5</view>
+          </view>
+
+          <view class='tr'>
+            <view class='td' style="width:100%">女鞋</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>脚长 cm</view>
+            <view class='td'>22.5</view>
+            <view class='td'>23</view>
+            <view class='td'>23.5</view>
+            <view class='td'>24</view>
+            <view class='td'>24.5</view>
+            <view class='td'>25</view>
+            <view class='td'>25.5</view>
+            <view class='td'>26</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>欧洲EUR</view>
+            <view class='td'>36 2/3</view>
+            <view class='td'>37 1/3</view>
+            <view class='td'>38</view>
+            <view class='td'>38 2/3</view>
+            <view class='td'>39 1/3</view>
+            <view class='td'>40</view>
+            <view class='td'>40 2/3</view>
+            <view class='td'>41 1/3</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>美国 US</view>
+            <view class='td'>5.5</view>
+            <view class='td'>6</view>
+            <view class='td'>6.5</view>
+            <view class='td'>7</view>
+            <view class='td'>7.5</view>
+            <view class='td'>8</view>
+            <view class='td'>8.5</view>
+            <view class='td'>9</view>
+          </view>
+          <view class='tr zghx'>
+            <view class='td'>英国 UK</view>
+            <view class='td'>4.5</view>
+            <view class='td'>5</view>
+            <view class='td'>5.5</view>
+            <view class='td'>6</view>
+            <view class='td'>6.5</view>
+            <view class='td'>7</view>
+            <view class='td'>7.5</view>
+            <view class='td'>8</view>
+          </view>
+        </view>
+        <view class="shuoming"><text>{{cm_shuoming}}</text></view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

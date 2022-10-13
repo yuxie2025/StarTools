@@ -1,0 +1,119 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.bgImage{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-size: 100% 100%;
+}
+
+.btn_view {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name_view {
+  margin-top: 200rpx;
+  font-size: 100rpx;
+  height: 80rpx;
+  margin-bottom: 120rpx;
+  margin-top: 130rpx;
+  margin-left: 80rpx;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  color: #312520;
+}
+
+.btn {
+  background-color: chocolate;
+  width: 50%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  border-radius: 50rpx;
+  text-align: center;
+  margin: 20rpx auto;
+}
+
+.custom {
+  background-color: firebrick;
+}
+
+.more_tools {
+  background-color: green;
+}
+
+.switch_name {
+  color: #555;
+  text-align: center;
+  font-size: 36rpx;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  margin-top: 15rpx;
+}
+
+.add {
+  font: 26rxp;
+  height: 40rpx;
+  font-size: 26rpx;
+  margin-left: 10rpx;
+  background-color: green;
+  color: #fff;
+  text-align: center;
+  padding: 5rpx 10rpx;
+  border-radius: 23rpx;
+}
+
+/*分割线样式*/
+.line {
+  background: #E0E3DA;
+  width: 100%;
+  margin-top: 4px;
+  height: 2rpx;
+}
+
+.content {
+  width: 100%;
+  margin-top: 5vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.btns_view {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25rpx;
+}
+
+.checked_button{
+  color: #fff;
+  font-size: 22rpx;
+  background-image:  linear-gradient(to right, tomato,palevioletred);
+}
+
+.normal_button{
+  color: #555;
+  font-size: 22rpx;
+  border: solid 1rpx#555;
+}
+
+.share_view{
+  float: right;
+  display: flex;
+  line-height: 50rpx;
+  background-color: #fff;
+  padding: 10rpx 15rpx 10rpx 25rpx;
+  border-radius: 50rpx 0 0 50rpx;
+  color:#fff;
+  background-color: #f35336;
+}

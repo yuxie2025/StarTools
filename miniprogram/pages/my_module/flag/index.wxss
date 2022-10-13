@@ -1,0 +1,90 @@
+/* pages/guoqing/guoqing.wxss */
+page{
+  background: #FF5651;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+ }
+ 
+ .header{
+   width: 315px!important;
+   height: 125px!important;
+ }
+
+ .canvas-view{
+   width: 100%;
+   align-content: center;
+   align-items: center;
+   text-align: center;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+ }
+
+ .canvas-view-right{
+   display: flex;
+   flex-direction: column;
+   margin-top: 20px;
+ }
+ 
+ .btn{
+   background-color:#EB9A41;
+   border-radius: 10rpx;
+   color:#ffffff;
+   width: 130px!important;
+   height: 40px!important;
+   font-size: 32rpx;
+   height: 50rpx;
+   display: flex;
+   justify-content: center;
+   margin-bottom: 15px;
+   margin-right: 20px;
+ }
+ 
+ /* list公共 */
+ .hot-biz{
+   margin-top: 10px;
+   background: #fff;
+ }
+ .hot-biz .tx{
+   font-size: 15px;
+   margin-left: 10px;
+   padding: 9px 0;
+   font-weight: 700;
+   color: #FF5651;
+ }
+ .hot-top{
+   display: flex;
+ }
+ 
+ /* 热门壁纸 */
+ .hot-item-list{
+   margin: 0 auto;
+   width: 94%;
+   margin-bottom: 20px;
+   align-items: center;
+ }
+ .hot-biz-list { 
+   display: flex; 
+   justify-content: space-between; 
+   height: 100%;
+   align-items: center;
+   /* flex-wrap: wrap; */
+ }
+ .hot-biz-list .item { 
+   width: 50px;  
+   flex-direction: column; 
+   align-items: center; 
+   height: 50px;
+   padding-right: 8px;
+ }
+ .hot-biz-list image { 
+   width: 50px; 
+   height: 50px;
+   border-radius:5px;
+   margin: 0 auto;
+   display: block;
+   border:1px solid rgb(235, 235, 245);
+ }
+ /* end */

@@ -1,0 +1,18 @@
+<wxs module="filters" src="filter.wxs"></wxs>
+<view class="container">
+  <view class="money">
+    <image style="height: 100rpx;width: 100rpx;" src='money.png'></image>
+  </view>
+  <view class="money1">我的金币</view>
+  <view class="money21">$<view class="money2">{{filters.toFix(num,2)}}</view>
+  </view>
+  <!-- <view class="money3">转入金币></view> -->
+  <view class="padding flex flex-direction">
+    <button class="bg-green" open-type="share">分享好友</button>
+    <button class="bg-grey" bindtap="toast">转出金币</button>
+  </view>
+  <!-- <view style="display: flex;flex-direction: row;"> -->
+  <!-- <view class="money6">常见问题</view> -->
+  <view class="money5">本服务由本小程序提供,仅供娱乐</view>
+  <!-- </view> -->
+</view>

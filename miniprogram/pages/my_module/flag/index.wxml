@@ -1,0 +1,33 @@
+<!--pages/guoqing/guoqing.wxml-->
+<view class="hot-biz" style="width: 90%;border-radius: 10px;margin-bottom:15px;">
+  <view class="hot-top">
+    <view class="tx">火爆</view>
+  </view>
+  <view class="hot-item-list">
+    <scroll-view scroll-x>
+      <view class="hot-biz-list">
+        <view class="item" wx:for="{{list}}" wx:key="id">
+          <image bindtap='selectImg' data-id='{{item}}' data-src='../../../images/hat{{item}}.png' src="../../../images/hat{{item}}.png" mode='aspectFill'></image>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+
+<view class="canvas-view">
+
+  <view style="width:150px;margin-left:20px;border: 2px solid #ffffff;">
+    <canvas canvas-id="shareImg" style="width:150px;"></canvas>
+  </view>
+
+  <!-- 预览区域  -->
+  <view class='canvas-view-right'>
+    <button bindtap="chooseImage" class="btn">选择头像</button>
+    <button bindtap="save" class="btn" disabled="{{!hasUserInfo}}">保存头像</button>
+    <button open-type="share" bindtap='handleShare' class="btn">分享好友</button>
+  </view>
+
+</view>
+<view style="width: 95%;margin: 20rpx auto;">
+  <ad unit-id="{{videoUnitId}}" ad-type="video" ad-theme="white" ad-intervals="30"></ad>
+</view>

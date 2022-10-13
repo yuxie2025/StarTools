@@ -1,0 +1,21 @@
+<!--pages/home/home/index.wxml-->
+<view>
+  <!-- <ad unit-id="{{videoUnitId}}" ad-type="video" ad-theme="white" ad-intervals="30"></ad> -->
+</view>
+
+<t-tabs style="margin-top: 5rpx;" defaultValue="{{0}}" wx:if="{{classlist.length>0}}" bind:change="onTabsChange" bind:click="onTabsClick" t-class="custom-tabs" class="custom-tabs">
+  <t-tab-panel wx:for="{{classlist}}" wx:key="index" wx:for-item="class_item" label="{{class_item.name}}" value="{{index}}">
+    <view class="items-list-wrap">
+      <block wx:for="{{class_item.itemsList}}" wx:for-item="item" wx:key="index">
+        <view class="item-list-wrap" data-id="{{item}}" bind:tap="selectTop">
+          <view class="item_left">
+            <text></text>
+            <!-- <text class="item_level">{{item.sort}}</text> -->
+          </view>
+          <image class="imgs data-v-8d1cd75a" lazyLoad="{{true}}" src="{{item.icon}}"></image>
+          <text class="item_name">{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+  </t-tab-panel>
+</t-tabs>

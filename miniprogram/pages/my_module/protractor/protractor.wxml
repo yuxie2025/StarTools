@@ -1,0 +1,17 @@
+<view class="container" wx:if="{{!isRelease}}">
+    <camera devicePosition="back" flash="off" wx:if="{{show}}"></camera>
+    <canvas canvasId="firstCanvas" id="can"></canvas>
+    <canvas bindtouchmove="move" bindtouchstart="move" canvasId="secCanvas" id="can2"></canvas>
+    <cover-view class="co">
+        <button catchtap="toint" class="int">取 整</button>
+    </cover-view>
+    <cover-view class="showWrap co">
+        <button bindtap="show" class="ph" wx:if="{{!show&&!isTake}}">开摄像头</button>
+        <button bindtap="close" class="ph" wx:if="{{show}}">关摄像头</button>
+        <button bindtap="reset" class="ph" wx:if="{{isTake&&!show}}">复 位</button>
+    </cover-view>
+    <cover-view class="takeWrap co">
+        <button bindtap="takePhoto" class="take" wx:if="{{!isTake&&show}}">拍 照</button>
+        <button bindtap="takePhoto" class="take" wx:if="{{isTake&&!show}}">重 拍</button>
+    </cover-view>
+</view>

@@ -1,0 +1,224 @@
+/* miniprogram/pages/bigWheel/chooseItem/chooseItem.wxss */
+page {
+  width: 100%;
+  background-color: #efefef;
+}
+
+.container {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.question_tab_box {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  background-color: #ffffff;
+  border-top:4rpx solid #efefef;
+}
+
+.question_tab {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 48px;
+  font-size: 14px;
+  color: #7a7a7a;
+  box-sizing: border-box;
+  margin: 0 12px;
+  letter-spacing:6rpx;
+}
+
+.question_tab_selected {
+  color: #000000;
+  border-top: 3px solid transparent;
+  border-bottom: 3px solid #007aff;
+}
+
+.question_list_box {
+  width: 100%;
+}
+
+.question_list_cell {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  width: calc(100% - 20px);
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #ffffff;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.question {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% - 80px);
+  height: 60px;
+  font-size: 14px;
+  color: #007aff;
+  padding-left: 20px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: underline;
+}
+
+@keyframes question_rotate {
+  0% {
+      transform: rotateX(0deg);
+  }
+
+  100% {
+      transform: rotateX(360deg);
+  }
+}
+
+.question:hover {
+  animation: question_rotate 0.3s 0s linear 1 normal;
+}
+
+.question_control_box {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.question_control {
+  width: 20px;
+  height: 20px;
+  margin: 20px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.question_btn_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+
+.question_btn_cell {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+@keyframes icon_rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.question_btn_cell:hover .question_btn_icon {
+  animation: icon_rotate 0.3s 0s linear 1 normal;
+}
+
+button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 0px;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: transparent;
+}
+
+button::after {
+  border: none;
+}
+
+.btn_boder_right {
+  box-sizing: border-box;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid #f5f5f5;
+}
+
+.btn_boder_left {
+  box-sizing: border-box;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid transparent;
+  border-left: 1px solid f5f5f5;
+  border-right: 1px solid transparent;
+}
+
+.question_btn_icon {
+  width: 20px;
+  height: 20px;
+  margin: 10px 5px 10px 10px;
+}
+
+.question_btn_title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 40px;
+  color: #007aff;
+  font-size: 12px;
+}
+
+.personal_question_add_cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #007aff;
+  box-sizing: border-box;
+}
+
+.question_add_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.question_add_icon {
+  width: 20px;
+  height: 20px;
+}
+
+.personal_question_add_cell:hover .question_add_icon {
+  animation: btn_rotate 0.3s 0s linear 1 normal;
+}
+
+.sticky {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*
+  position: sticky;
+  bottom: 0;
+  */
+}

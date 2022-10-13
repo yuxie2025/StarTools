@@ -1,0 +1,7 @@
+<ad unit-id="{{bannerUnitId}}" ad-intervals="30" />
+<button bindtap="chooseImage" class="button" hoverClass="button-hover">扫描或选择图片</button>
+<view class="result" hidden="{{!result}}">
+    <view class="showResult">
+        <span style="color:#08e037;">扫描结果为：</span>{{result}}</view>
+    <button bindtap="copy" class="button" hoverClass="button-hover">复制</button>
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "t-tabs": "/components/tabs/tabs",
+    "t-tab-panel": "/components/tabs/tab-panel"
+  }
+}

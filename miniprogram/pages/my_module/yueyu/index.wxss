@@ -1,0 +1,329 @@
+page {
+    box-sizing: border-box;
+    padding: 30rpx;
+}
+
+.page-title {
+    font-size: 36rpx;
+    font-weight: 700;
+    margin-bottom: 30rpx;
+    text-align: center;
+}
+
+.page-content {
+    border-bottom: 1rpx solid #eee;
+    color: #333;
+    font-size: 28rpx;
+    line-height: 1.5;
+    padding: 20rpx 30rpx;
+}
+
+.page-content view:first-child {
+    border-bottom: 1rpx solid #f9f9f9;
+    margin-bottom: 10rpx;
+    padding-bottom: 10rpx;
+}
+
+.page-content view text {
+    color: #999;
+}
+
+.page-content image {
+    height: 30rpx;
+    margin-left: 10rpx;
+    vertical-align: middle;
+    width: 30rpx;
+}
+
+.base-btn {
+    background: linear-gradient(90deg,#34d9f9,#1d92f5);
+    border-radius: 50rpx;
+    box-shadow: 0 11rpx 60rpx 0rpx rgba(1,134,255,.3);
+    color: #fff;
+    font-size: 36rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    width: 650rpx;
+}
+
+page {
+    background: #f6f6f6;
+    padding: 130rpx 30rpx 30rpx;
+}
+
+.translate-type,page {
+    box-sizing: border-box;
+}
+
+.translate-type {
+    align-items: center;
+    background: #fff;
+    display: flex;
+    font-size: 24rpx;
+    height: 100rpx;
+    justify-content: center;
+    left: 0;
+    line-height: 100rpx;
+    padding: 0 30rpx;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.clear-btn {
+    background: none;
+    color: #98c7ff;
+    font-size: 24rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+    margin: 0;
+    padding: 0;
+}
+
+.translate-type image {
+    border: 2rpx solid #e0e0e0;
+    border-radius: 22rpx;
+    flex: 0 30rpx;
+    height: 30rpx;
+    margin: 0 20rpx;
+    padding: 5rpx 20rpx;
+    width: 30rpx;
+}
+
+.translate-type text {
+    flex: 1;
+    text-align: center;
+}
+
+.word-wrapper {
+    background: #fff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    font-size: 30rpx;
+    height: 300rpx;
+    padding: 30rpx;
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper {
+    box-shadow: 0 3rpx 60rpx 0 rgba(0,0,0,.04);
+}
+
+.translate-btns {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    margin: 40rpx auto 60rpx;
+    padding-right: 20rpx;
+    width: 100%;
+}
+
+.translate-btn {
+    flex: 1;
+    margin-left: 20rpx;
+    text-align: center;
+    width: 100%;
+}
+
+button::after {
+    border: none;
+}
+
+.translate-title {
+    color: #666;
+    font-size: 24rpx;
+    line-height: 1;
+    margin-bottom: 30rpx;
+}
+
+.index-btns {
+    align-items: center;
+    bottom: 30rpx;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    opacity: .4;
+    position: fixed;
+    transform: translateX(-50%);
+}
+
+.index-about {
+    color: #0a7bc7;
+    margin: 10rpx auto 0;
+    position: relative;
+    width: 230rpx;
+}
+
+.index-about .index-button-about {
+    background: none;
+    color: #0a7bc7;
+    font-size: 18rpx;
+    margin-top: 0;
+}
+
+.index-about::after,.index-about::before {
+    border: 1rpx dashed #0a7bc7;
+    content: "";
+    height: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 65rpx;
+}
+
+.index-about::before {
+    left: 0;
+}
+
+.index-about::after {
+    right: 0;
+}
+
+.index-button-reward {
+    background: #0a7bc7;
+    color: #fff;
+    font-size: 16rpx;
+    margin-top: 10rpx;
+    padding: 0;
+    width: 118rpx;
+}
+
+.translate-result {
+    background: #eee;
+}
+
+.textarea-out textarea {
+    height: 185rpx;
+    width: 100%;
+}
+
+.textarea-in {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    width: 100%;
+}
+
+.sound-play {
+    background: url(https://www.meiaile.com:8088/static/sys/common/static/xcx/pic/sound.png) no-repeat 0;
+    background-size: 40rpx 40rpx;
+    height: 80rpx;
+    width: 80rpx;
+}
+
+.sound-play.on {
+    background-image: url(https://www.meiaile.com:8088/static/sys/common/static/xcx/pic/sounding.png);
+}
+
+.sound-play-result {
+    background-position: 50%;
+    bottom: 10rpx;
+    left: 10rpx;
+    position: absolute;
+}
+
+.copy {
+    background-size: 34rpx 34rpx;
+    background: #98c7ff;
+    border-radius: 20rpx;
+    bottom: 30rpx;
+    color: #fff;
+    font-size: 21rpx;
+    height: 40rpx;
+    line-height: 40rpx;
+    position: absolute;
+    right: 30rpx;
+    text-align: center;
+    width: 140rpx;
+}
+
+.record {
+    background: red;
+    height: 100rpx;
+    left: 0;
+    position: fixed;
+    top: 80%;
+    width: 100rpx;
+}
+
+.share-shadow {
+    background: rgba(0,0,0,.7);
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+.share-wrapper {
+    background: #fff;
+    border-radius: 10rpx;
+    box-sizing: border-box;
+    padding-top: 93rpx;
+    position: fixed;
+    top: 380rpx;
+    width: 520rpx;
+    z-index: 100;
+}
+
+.share-wrapper,.share-wrapper::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.share-wrapper::after {
+    background: url(https://www.meiaile.com:8088/static/sys/common/static/xcx/pic/smile.png) no-repeat 50%;
+    background-size: contain;
+    content: "";
+    height: 150rpx;
+    position: absolute;
+    top: -80rpx;
+    width: 150rpx;
+}
+
+.share-wrapper-title {
+    color: #000;
+    font-size: 34rpx;
+    font-weight: 700;
+    margin-bottom: 20rpx;
+    text-align: center;
+}
+
+.share-wrapper-content {
+    color: rgba(0,0,0,.6);
+    font-size: 30rpx;
+    margin-bottom: 30rpx;
+    text-align: center;
+}
+
+.share-wrapper-btns {
+    border-top: 1rpx solid rgba(0,0,0,.1);
+    display: flex;
+    height: 50rpx;
+    padding: 20rpx 0;
+}
+
+.share-wrapper-btn {
+    background: none;
+    color: rgba(0,0,0,.6);
+    flex: 1;
+    font-size: 32rpx;
+    line-height: 50rpx;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.share-wrapper-btn:last-child {
+    border-left: 1rpx solid rgba(0,0,0,.1);
+    border-radius: 0;
+    color: #1ecaf5;
+}
+
+.xf {
+    bottom: 35%;
+}
