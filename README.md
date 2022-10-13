@@ -3,7 +3,7 @@
 开源小程序源码 明星工具箱,不需要任何服务器和云服务资源,拥有海量工具,功能不断增加,支持流量主,欢迎star.
 ## 2.在线体验小程序--明星工具箱
 ![明星工具箱](https://mmbiz.qpic.cn/mmbiz_jpg/ncTiaSqpEq9SCFlvsk5y7td8gYYMbibDkJm9EjBSSt1ia96zbGQDzCDceFCnUAtdAFiclp4y1niaCSJ2CSHeib5iaDfrQ/0?wx_fmt=jpeg)
-![明星工具箱](https://raw.githubusercontent.com/yuxie2025/StarTools/master/my_tools_qrcode.jpg)
+![明星工具箱](https://gitee.com/yuxie2025/StarTools/raw/master/my_tools_qrcode.jpg)
 
 ## 3.2022-10-13 列表功能(共计37个常用工具):
 ### 3.1.测算工具: 
