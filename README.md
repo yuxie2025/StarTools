@@ -1,6 +1,8 @@
 
 ## 1.小程序-明星工具箱
 开源小程序源码 明星工具箱,不需要任何服务器和云服务资源,拥有海量工具,功能不断增加,支持流量主,欢迎star.
+
+AI换脸(变脸),AI绘画,AI转动漫 (AI部分需要有自己服务器,仅提供方案)[AI部分文档](AI_README.md)
 ## 2.在线体验小程序--明星工具箱
 ![明星工具箱](https://mmbiz.qpic.cn/mmbiz_jpg/ncTiaSqpEq9SCFlvsk5y7td8gYYMbibDkJm9EjBSSt1ia96zbGQDzCDceFCnUAtdAFiclp4y1niaCSJ2CSHeib5iaDfrQ/0?wx_fmt=jpeg)
 ![明星工具箱](https://gitee.com/yuxie2025/StarTools/raw/master/my_tools_qrcode.jpg)

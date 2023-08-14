@@ -1,6 +1,6 @@
 /* pages/home/info/index.wxss */
 .top_info{
-  font-size: 36rpx;
+  font-size: 10pt;
   text-align: center;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
