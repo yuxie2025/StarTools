@@ -1,5 +1,5 @@
 getApp();
-import Utils from '../../utils/common_utils';
+var Utils = require('../../utils/common_utils');
 var t = require("./relationship");
 
 Page({

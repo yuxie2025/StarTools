@@ -187,11 +187,7 @@ var json = {
       "id": "1567024973927944194",
       "sort": 12,
       "type": "bmi"
-    }],
-    "name": "测算工具",
-    "id": "calc"
-  }, {
-    "itemsList": [{
+    }, {
       "extend": "Y",
       "isUse": "Y",
       "path": "/pages/my_module/eat/index",
@@ -299,11 +295,7 @@ var json = {
       "id": "1567023118351077378",
       "sort": 11,
       "type": "cuttingNine"
-    }],
-    "name": "信息查询",
-    "id": "oil_price"
-  }, {
-    "itemsList": [{
+    }, {
       "extend": "Y",
       "isUse": "Y",
       "path": "/pages/my_module/timejs/index",
@@ -459,11 +451,7 @@ var json = {
       "id": "1567031487522672641",
       "sort": 6,
       "type": "scanQrcode"
-    }],
-    "name": "常用工具",
-    "id": "bigWheel"
-  },  {
-    "itemsList": [{
+    },  {
       "extend": "N",
       "isUse": "Y",
       "path": "/pages/my_module/eglfq/index",
@@ -511,9 +499,7 @@ var json = {
       "id": "1567035718526832642",
       "sort": 13,
       "type": "2048"
-    }],
-    "name": "娱乐工具",
-    "id": "eglfq"
+    }]
   }],
   "success": true,
   "timestamp": 1665563730355

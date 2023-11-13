@@ -77,7 +77,7 @@ Page({
   netWork() {
     var _this = this;
     wx.request({
-      url: 'https://forbes400.herokuapp.com/api/forbes400?limit=100',
+      url: 'https://forbes400.onrender.com/api/forbes400?limit=100',
       header: {
         "Content-Type": "application/x-www-form-urlencoded"
       },

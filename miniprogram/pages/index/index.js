@@ -62,12 +62,6 @@ Page({
         icon: "none"
       })
     }
-    this.update(item.type);
-
-    if (path == "chickenSoup") {
-      this.getChickenSoup();
-      return
-    }
 
     wx.navigateTo({
       url: path,
@@ -83,83 +77,40 @@ Page({
   //获取功能列表
   getListInfo() {
     let _this = this;
-    console.log(jsonData.data.result)
+
+    let data = jsonData.data.result[0].itemsList
+    data = this.sortFun(data, "sort", "order");
+    console.log(data)
     _this.setData({
-      classlist: jsonData.data.result,
+      classlist: data,
       listDataSuccess: true
     })
   },
-
-  update(type) {
-    let key = type;
-    let oTime = 0;
-    try {
-      oTime = wx.getStorageSync(key)
-    } catch (e) {}
-    let cTime = new Date().getTime();
-    if (cTime - oTime <= 5 * 60 * 1000) {
-      return
-    }
-    try {
-      wx.setStorageSync(key, cTime)
-    } catch (e) {}
-
-    wx.request({
-      url: 'https://www.meiaile.com:8088/static/public/countAdd',
-      data: {
-        "type": type
-      },
-      success: res => {},
-      fail: err => {}
-    })
-  },
-
-  bannerError(event) {
-    var errCode = event.detail.errCode;
-    console.log("errCode:" + errCode)
-    if (errCode == 1004) {
-      this.setData({
-        isShowBottomAd: true
-      })
-    }
-  },
-
-  getChickenSoup() {
-    let _this = this;
-    wx.showLoading({
-      title: '加载中...',
-    })
-    wx.request({
-      url: 'https://www.meiaile.com:8088/static/public/chickenSoup',
-      success: res => {
-        wx.hideLoading();
-        if (res.data.success) {
-          wx.showModal({
-            showCancel: false,
-            title: "每日鸡汤",
-            content: res.data.result.text,
-            success(res) {}
-          })
+  /**
+   * @method sortFun
+   * @param arr 要传递的排序对象数组
+   * @param name 要传递的排序字段
+   * @param type 要传递的排序类型 默认升序:order 降序:desc
+   */
+  sortFun(arr, name, type) {
+    const compare = (prop) => {
+      return function (obj1, obj2) {
+        let val1 = obj1[prop];
+        let val2 = obj2[prop];
+        if (val1 < val2) {
+          return -1;
+        } else if (val1 > val2) {
+          return 1;
         } else {
-          wx.showToast({
-            title: res.data.message,
-            icon: 'none'
-          })
+          return 0;
         }
-      },
-      fail: res => {
-        wx.showToast({
-          title: "服务器繁忙,请稍后再试!",
-          icon: 'none'
-        })
       }
-    });
-  },
-  onTabsChange(event) {
-    // console.log(`Change tab, tab-panel value is ${event.detail.value}.`);
-  },
-  onTabsClick(event) {
-    // console.log(`Click tab, tab-panel value is ${event.detail.value}.`);
-  },
+    }
+    if (type == 'desc') {
+      return arr.sort(compare(name));
+    } else {
+      return arr.sort(compare(name)).reverse();
+    }
+  }
 
 })
